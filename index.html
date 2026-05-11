@@ -1,0 +1,1472 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Василий Ревякин — ведущий свадеб и корпоративных событий | Москва, Пенза, Саранск, Россия</title>
+<meta name="description" content="Ведущий свадеб и корпоративных событий. 10+ лет опыта, 80+ мероприятий в 2025 году. Москва, Пенза, Саранск, по всей России и за рубежом. Авторский подход, импровизация, смысл, юмор.">
+<meta property="og:title" content="Василий Ревякин — ведущий свадеб и корпоративных событий">
+<meta property="og:description" content="Ведущий свадеб и корпоративных событий. 10+ лет опыта, 80+ мероприятий в 2025 году. Москва, Пенза, Россия и зарубеж.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://reviyakin.ru/">
+<meta property="og:image" content="images/og-cover.jpg">
+<meta property="og:locale" content="ru_RU">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Василий Ревякин — ведущий свадеб и корпоративных событий">
+<meta name="twitter:description" content="Ведущий свадеб и корпоративных событий. 10+ лет опыта, 80+ мероприятий в 2025 году.">
+<meta name="twitter:image" content="images/og-cover.jpg">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='50%25' y='56%25' dominant-baseline='middle' text-anchor='middle' font-family='sans-serif' font-size='16' font-weight='300' fill='%23C9B58A'%3EВР%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500&family=Inter:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="https://unpkg.com/split-type@0.3.4/umd/index.min.js"></script>
+<script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+<style>
+:root {
+  --bg-void: #0A0A0B;
+  --bg-graphite: #131316;
+  --bg-pure: #000000;
+  --ink: #F2F0EB;
+  --ink-mute: #6B6B70;
+  --accent: #C9B58A;
+  --accent-hot: #E3CFA0;
+  --line: rgba(242,240,235,0.07);
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:auto;}
+body{background:var(--bg-void);color:var(--ink);font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;overflow-x:hidden;}
+@media (hover:hover){body{cursor:none;}}
+::-webkit-scrollbar{width:6px;}
+::-webkit-scrollbar-track{background:transparent;}
+::-webkit-scrollbar-thumb{background:rgba(201,181,138,.3);border-radius:3px;}
+::-webkit-scrollbar-thumb:hover{background:var(--accent);}
+a{color:inherit;text-decoration:none;}
+img{display:block;max-width:100%;}
+:focus-visible{outline:2px solid var(--accent);outline-offset:4px;}
+
+/* CURSOR */
+#cur-dot{width:6px;height:6px;background:var(--ink);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);transition:background .2s,width .2s,height .2s;}
+#cur-ring{width:32px;height:32px;border:1px solid rgba(242,240,235,.3);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .3s,height .3s;display:flex;align-items:center;justify-content:center;}
+#cur-ring .cr-text{font-family:'JetBrains Mono',monospace;font-size:9px;color:var(--ink);opacity:0;transition:opacity .2s;white-space:nowrap;letter-spacing:.05em;}
+body.cur-hover #cur-dot{background:var(--accent);}
+body.cur-hover #cur-ring{width:60px;height:60px;}
+body.cur-gallery #cur-dot{background:var(--accent);}
+body.cur-gallery #cur-ring{width:80px;height:80px;}
+body.cur-gallery #cur-ring .cr-text{opacity:1;}
+@media (hover:none){#cur-dot,#cur-ring{display:none;}}
+
+/* TYPOGRAPHY */
+h1,h2,h3{font-family:'Space Grotesk',sans-serif;font-weight:300;}
+.mono{font-family:'JetBrains Mono',monospace;}
+
+/* CONTAINER */
+.wrap{max-width:1440px;margin:0 auto;padding:0 80px;}
+@media(max-width:1024px){.wrap{padding:0 48px;}}
+@media(max-width:640px){.wrap{padding:0 24px;}}
+
+/* SECTION LABEL */
+.sec-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px;display:flex;align-items:center;gap:12px;}
+.sec-label::after{content:'';display:inline-block;width:80px;height:1px;background:var(--line);}
+
+/* H2 */
+.sec-h2{font-size:clamp(48px,7vw,120px);letter-spacing:-.03em;line-height:.95;margin-bottom:60px;}
+
+/* BUTTONS */
+.btn{display:inline-flex;align-items:center;justify-content:center;height:64px;padding:0 40px;border-radius:0;font-family:'JetBrains Mono',monospace;font-size:13px;text-transform:uppercase;letter-spacing:.2em;cursor:pointer;text-decoration:none;border:none;overflow:hidden;position:relative;}
+.btn-primary{background:var(--accent);color:var(--bg-void);transition:background .4s cubic-bezier(.7,0,.2,1);}
+.btn-primary:hover{background:var(--accent-hot);}
+.btn-primary .bti{display:flex;flex-direction:column;height:64px;overflow:hidden;}
+.btn-primary .btt,.btn-primary .btb{display:block;line-height:64px;height:64px;transition:transform .4s cubic-bezier(.7,0,.2,1);}
+.btn-primary:hover .btt{transform:translateY(-100%);}
+.btn-primary:hover .btb{transform:translateY(-100%);}
+.btn-ghost{background:transparent;color:var(--accent);border:1px solid var(--accent);}
+.btn-ghost::before{content:'';position:absolute;inset:0;background:var(--accent);transform:scaleY(0);transform-origin:bottom;transition:transform .4s cubic-bezier(.7,0,.2,1);}
+.btn-ghost:hover::before{transform:scaleY(1);}
+.btn-ghost>span{position:relative;z-index:1;transition:color .4s;}
+.btn-ghost:hover>span{color:var(--bg-void);}
+
+/* PLACEHOLDER */
+.ph{background:var(--bg-graphite);position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;}
+.ph::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(242,240,235,.03) 0,rgba(242,240,235,.03) 1px,transparent 1px,transparent 12px);}
+.ph-meta{position:absolute;top:12px;left:12px;font-family:'JetBrains Mono',monospace;font-size:10px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.08em;z-index:1;}
+.ph-name{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.1em;text-align:center;position:relative;z-index:1;}
+.ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+
+/* DIVIDERS */
+.divider{height:60vh;display:flex;align-items:center;justify-content:center;}
+.div-inner{display:flex;flex-direction:column;align-items:center;width:100%;max-width:1440px;padding:0 80px;}
+@media(max-width:640px){.div-inner{padding:0 24px;}}
+.div-vline{width:1px;height:60px;background:var(--line);}
+.div-row{display:flex;align-items:center;width:100%;}
+.div-hline{height:1px;background:var(--line);width:0;flex:1;max-width:40%;}
+.div-word{font-family:'JetBrains Mono',monospace;font-size:14px;text-transform:uppercase;letter-spacing:.4em;color:var(--accent);padding:0 24px;white-space:nowrap;}
+
+/* HEADER */
+header{position:fixed;top:0;left:0;right:0;height:80px;z-index:100;transition:background .3s,border-color .3s;border-bottom:1px solid transparent;}
+header.scrolled{background:rgba(10,10,11,.85);backdrop-filter:blur(12px);border-bottom-color:var(--line);}
+@media(max-width:640px){header{height:64px;}}
+.hdr{display:flex;align-items:center;justify-content:space-between;height:100%;}
+.hdr-logo{height:24px;display:flex;align-items:center;}
+.hdr-logo img{height:24px;width:auto;}
+.hdr-logo .logo-ph{font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--accent);letter-spacing:.15em;}
+nav{display:flex;align-items:center;gap:32px;}
+nav a{font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-mute);transition:color .2s;}
+nav a .ni{color:var(--accent);transition:color .2s;}
+nav a:hover{color:var(--ink);}
+nav a:hover .ni{color:var(--ink-mute);}
+@media(max-width:1024px){nav{display:none;}}
+.burger{display:none;flex-direction:column;gap:8px;cursor:pointer;background:none;border:none;padding:4px;}
+.bl{width:24px;height:1px;background:var(--ink);}
+@media(max-width:1024px){.burger{display:flex;}}
+.mob-nav{position:fixed;inset:0;background:var(--bg-pure);z-index:200;display:flex;flex-direction:column;justify-content:center;padding:80px 24px 40px;transform:translateX(100%);transition:transform .5s cubic-bezier(.7,0,.2,1);}
+.mob-nav.open{transform:translateX(0);}
+.mob-close{position:absolute;top:20px;right:24px;font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--ink);background:none;border:none;cursor:pointer;line-height:1;}
+.mob-nav a{font-family:'Space Grotesk',sans-serif;font-weight:300;font-size:clamp(36px,7vw,60px);color:var(--ink);display:block;overflow:hidden;margin-bottom:4px;line-height:1.2;}
+.mob-nav a span{display:block;}
+
+/* HERO */
+#top{min-height:100vh;background:var(--bg-pure);position:relative;overflow:hidden;}
+.hero-grid{display:grid;grid-template-columns:5fr 7fr;min-height:100vh;}
+@media(max-width:1024px){.hero-grid{grid-template-columns:1fr;}}
+.hero-left{display:flex;flex-direction:column;padding:120px 0 60px 80px;position:relative;z-index:2;}
+@media(max-width:1024px){.hero-left{padding:100px 48px 40px;}}
+@media(max-width:640px){.hero-left{padding:90px 24px 40px;}}
+.hero-svc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:auto;}
+.hero-logo-wrap{height:80px;display:flex;align-items:center;margin-bottom:32px;margin-top:40px;}
+.hero-logo-wrap img{height:80px;width:auto;}
+.hero-logo-wrap .logo-ph{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--accent);letter-spacing:.2em;}
+.hero-h1{font-size:clamp(64px,9vw,160px);line-height:.92;letter-spacing:-.04em;color:var(--ink);margin-bottom:60px;overflow:visible;}
+@media(min-width:1025px){.hero-h1{width:145%;}}
+.hero-bot{display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
+.hero-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.12em;text-transform:uppercase;}
+.hero-right{position:relative;overflow:hidden;}
+@media(max-width:1024px){.hero-right{aspect-ratio:3/5;width:100%;}}
+.hero-right img{width:100%;height:100%;object-fit:cover;}
+.hero-overlay{position:absolute;inset:0;background:linear-gradient(to top left,rgba(0,0,0,.7),transparent 60%);}
+.hero-scroll{position:absolute;bottom:40px;right:40px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink);writing-mode:vertical-rl;letter-spacing:.2em;text-transform:uppercase;animation:blink 3s infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
+
+/* APPROACH */
+#approach{background:var(--bg-void);padding:160px 0;}
+.app-grid{display:grid;grid-template-columns:5fr 1fr 6fr;gap:24px;align-items:start;}
+@media(max-width:1024px){.app-grid{grid-template-columns:1fr;}}
+.app-photo{aspect-ratio:4/5;}
+.app-facts{display:flex;flex-direction:column;gap:80px;padding-top:40px;}
+.fact{position:relative;}
+.fact:nth-child(2){margin-left:24px;}
+.fact:nth-child(3){margin-left:48px;}
+.fact:nth-child(4){margin-left:72px;}
+.fact:nth-child(5){margin-left:96px;}
+@media(max-width:640px){.fact:nth-child(n){margin-left:0;}}
+.fact-num{font-size:clamp(100px,16vw,240px);font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.05em;line-height:.85;color:var(--ink);display:block;}
+.fact-line{width:0;height:1px;background:var(--accent);margin:16px 0;}
+.fact-lbl{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.15em;max-width:280px;}
+
+/* WHY */
+#why{position:relative;padding:160px 0;overflow:hidden;}
+.why-bg-wrap{position:absolute;inset:0;z-index:0;}
+.why-bg-wrap img{width:100%;height:100%;object-fit:cover;}
+.why-bg-wrap .ph{width:100%;height:100%;}
+.why-ov{position:absolute;inset:0;background:rgba(10,10,11,.7);}
+.why-ov2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.7));}
+.why-c{position:relative;z-index:1;}
+.why-list{list-style:none;display:flex;flex-direction:column;gap:48px;max-width:900px;}
+.why-item{display:flex;align-items:flex-start;gap:24px;}
+.why-dash{width:24px;height:1px;background:var(--accent);flex-shrink:0;margin-top:.65em;}
+.why-text{font-size:clamp(22px,2.4vw,36px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.3;}
+
+/* PAUSE */
+#pause{position:relative;min-height:100vh;display:flex;align-items:center;}
+.pause-bg-wrap{position:absolute;inset:0;z-index:0;}
+.pause-bg-wrap img{width:100%;height:100%;object-fit:cover;}
+.pause-bg-wrap .ph{width:100%;height:100%;}
+.pause-ov{position:absolute;inset:0;background:rgba(10,10,11,.75);}
+.pause-c{position:relative;z-index:1;padding:120px 0;width:100%;}
+.pause-text{font-size:clamp(26px,3.2vw,52px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.25;letter-spacing:-.02em;max-width:1000px;}
+.pause-line{display:block;overflow:hidden;margin-bottom:1.2em;}
+.pause-line-in{display:block;}
+.pause-text .acc{color:var(--accent);}
+.pause-sig{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.15em;margin-top:60px;}
+
+/* CORPORATE */
+#corporate{background:var(--bg-void);padding:160px 0;}
+.corp-grid{display:grid;grid-template-columns:5fr 1fr 6fr;gap:24px;align-items:start;margin-bottom:120px;}
+@media(max-width:1024px){.corp-grid{grid-template-columns:1fr;}}
+.corp-text p{color:var(--ink-mute);max-width:520px;margin-bottom:20px;line-height:1.7;}
+.corp-photo{aspect-ratio:4/5;}
+@media(max-width:1024px){.corp-photo{order:-1;}}
+.trust-lbl{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ink-mute);letter-spacing:.2em;text-transform:uppercase;text-align:center;margin-bottom:60px;}
+.logo-strip-wrap{overflow:hidden;margin-bottom:80px;mask-image:linear-gradient(90deg,transparent,black 80px,black calc(100% - 80px),transparent);}
+.logo-strip{display:flex;gap:40px;width:max-content;}
+.logo-item{flex-shrink:0;width:160px;height:60px;display:flex;align-items:center;justify-content:center;filter:grayscale(1) opacity(.5);transition:filter .3s;cursor:pointer;}
+.logo-item:hover{filter:none;}
+.logo-item img{max-width:160px;max-height:60px;object-fit:contain;}
+.logo-item .li-ph{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.1em;}
+.logo-item:hover .li-ph{color:var(--accent);}
+
+/* GALLERY */
+.gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:4px;margin-bottom:80px;}
+@media(max-width:1024px){.gallery-grid{grid-template-columns:repeat(4,1fr);}}
+@media(max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+.gi{position:relative;overflow:hidden;cursor:pointer;}
+.gi:nth-child(1){grid-column:span 3;grid-row:span 4;}
+.gi:nth-child(2){grid-column:span 2;grid-row:span 3;}
+.gi:nth-child(3){grid-column:span 1;grid-row:span 3;}
+.gi:nth-child(4){grid-column:span 2;grid-row:span 2;}
+.gi:nth-child(5){grid-column:span 2;grid-row:span 4;}
+.gi:nth-child(6){grid-column:span 2;grid-row:span 2;}
+.gi:nth-child(7){grid-column:span 3;grid-row:span 3;}
+.gi:nth-child(8){grid-column:span 1;grid-row:span 2;}
+.gi:nth-child(9){grid-column:span 2;grid-row:span 3;}
+.gi:nth-child(10){grid-column:span 3;grid-row:span 2;}
+@media(max-width:1024px){.gi:nth-child(n){grid-column:span 2;grid-row:span 3;}}
+@media(max-width:640px){.gi:nth-child(n){grid-column:span 1;grid-row:span 3;}}
+.gi .ph,.gi img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.7,0,.2,1);}
+.gi:hover .ph,.gi:hover img{transform:scale(1.04);}
+.gi-ov{position:absolute;inset:0;background:var(--bg-void);opacity:0;transition:opacity .6s;z-index:1;}
+.gi:hover .gi-ov{opacity:.3;}
+.gi-shutter{position:absolute;inset:0;background:var(--bg-void);z-index:2;transform-origin:top;}
+
+/* VIDEO */
+.vid-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px;}
+.vid-ph{aspect-ratio:16/9;background:var(--bg-graphite);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-bottom:80px;}
+.vid-ph::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(242,240,235,.03) 0,rgba(242,240,235,.03) 1px,transparent 1px,transparent 12px);}
+.vid-ph-txt{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.1em;position:relative;z-index:1;}
+.vid-embed{aspect-ratio:16/9;width:100%;margin-bottom:80px;border:none;display:block;}
+
+/* WEDDINGS */
+#weddings{background:var(--bg-graphite);padding:160px 0;}
+.wed-layout{display:grid;grid-template-columns:38% 1fr;gap:80px;align-items:start;}
+@media(max-width:1024px){.wed-layout{grid-template-columns:1fr;}}
+.wed-vid-sticky{position:sticky;top:120px;}
+@media(max-width:1024px){.wed-vid-sticky{position:relative;top:auto;}}
+.wed-vid-box{aspect-ratio:9/16;width:100%;background:var(--bg-void);overflow:hidden;}
+.wed-vid-box video{width:100%;height:100%;object-fit:cover;}
+.wed-vid-box .ph{width:100%;height:100%;}
+.wed-text p{color:var(--ink-mute);max-width:580px;margin-bottom:20px;line-height:1.7;}
+
+/* REVIEWS */
+.rev-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:40px;margin-top:80px;}
+.rev-wrap{overflow:hidden;position:relative;}
+@media(max-width:768px){.rev-wrap{overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;}}
+.rev-track{display:flex;gap:24px;cursor:grab;}
+.rev-track.grabbing{cursor:grabbing;}
+@media(max-width:768px){.rev-track{cursor:auto;}}
+.rev-card{flex-shrink:0;width:380px;background:var(--bg-void);padding:32px;transition:transform .3s,opacity .3s;}
+@media(max-width:768px){.rev-card{width:85vw;scroll-snap-align:start;}}
+.rev-hdr{display:flex;align-items:center;gap:16px;margin-bottom:20px;}
+.rev-av{width:64px;height:64px;border-radius:50%;overflow:hidden;flex-shrink:0;}
+.rev-av .ph{width:100%;height:100%;}
+.rev-av img{width:100%;height:100%;object-fit:cover;}
+.rev-name{font-family:'Inter',sans-serif;font-weight:500;font-size:16px;color:var(--ink);}
+.rev-text{font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:var(--ink-mute);}
+@media(max-width:768px){.rev-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}.rev-text.open{-webkit-line-clamp:unset;overflow:visible;}}
+.rev-nav{display:flex;gap:16px;margin-top:32px;align-items:center;justify-content:center;}
+.rev-btn{width:48px;height:48px;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s;}
+.rev-btn:hover{border-color:var(--accent);color:var(--accent);}
+@media(max-width:768px){.rev-nav{display:none;}}
+
+/* PRICE */
+#price{background:var(--bg-void);padding:160px 0;}
+.price-c{max-width:900px;margin:0 auto;text-align:center;}
+.price-num{font-size:clamp(80px,12vw,180px);font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.04em;line-height:.9;margin-bottom:60px;}
+.price-num .cur{color:var(--accent);}
+.price-pfx{font-size:clamp(18px,2vw,28px);font-weight:300;color:var(--ink-mute);}
+.price-body{color:var(--ink-mute);max-width:580px;margin:0 auto 40px;}
+.price-sub{color:var(--ink-mute);font-size:16px;max-width:580px;margin:60px auto 0;line-height:1.7;}
+
+/* GEO */
+#geo{background:var(--bg-graphite);padding:160px 0;}
+.geo-text{font-size:clamp(26px,3vw,46px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.3;margin-bottom:80px;max-width:900px;}
+.geo-text strong{font-weight:300;color:var(--ink);}
+.geo-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
+.geo-item{font-family:'JetBrains Mono',monospace;font-size:14px;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-mute);display:flex;align-items:center;gap:16px;}
+.geo-idx{color:var(--accent);}
+
+/* FAQ */
+#faq{background:var(--bg-void);padding:160px 0;}
+.faq-list{list-style:none;max-width:900px;}
+.faq-item{border-bottom:1px solid var(--line);}
+.faq-item:first-child{border-top:1px solid var(--line);}
+.faq-q{display:flex;align-items:flex-start;gap:24px;padding:32px 0;cursor:pointer;width:100%;background:none;border:none;text-align:left;}
+.faq-idx{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--accent);flex-shrink:0;padding-top:4px;}
+.faq-qt{font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:clamp(18px,2vw,26px);color:var(--ink);flex:1;}
+.faq-tog{font-family:'JetBrains Mono',monospace;font-size:24px;color:var(--accent);flex-shrink:0;line-height:1;}
+.faq-ans{max-height:0;overflow:hidden;transition:max-height .4s cubic-bezier(.7,0,.2,1);}
+.faq-ans-in{font-family:'Inter',sans-serif;font-size:16px;line-height:1.7;color:var(--ink-mute);padding:0 0 32px 48px;opacity:0;transition:opacity .3s;}
+.faq-item.open .faq-ans{max-height:500px;}
+.faq-item.open .faq-ans-in{opacity:1;}
+
+/* CONTACTS */
+#contacts{background:var(--bg-pure);padding:160px 0;}
+.contacts-h2{font-size:clamp(72px,14vw,200px);letter-spacing:-.04em;line-height:.9;margin-bottom:60px;}
+.contacts-sub{color:var(--ink-mute);max-width:580px;margin-bottom:80px;}
+.cont-list{list-style:none;max-width:900px;}
+.cont-item{display:flex;align-items:center;gap:0;padding:32px 0;border-bottom:1px solid var(--line);text-decoration:none;color:var(--ink);position:relative;transition:padding-left .3s;}
+.cont-item:first-child{border-top:1px solid var(--line);}
+.cont-arrow{font-family:'JetBrains Mono',monospace;font-size:18px;color:var(--accent);opacity:0;transform:translateX(-16px);transition:opacity .3s,transform .3s;position:absolute;left:-8px;}
+.cont-item:hover .cont-arrow{opacity:1;transform:translateX(0);}
+.cont-lbl{font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-mute);width:140px;flex-shrink:0;}
+.cont-val{font-family:'Space Grotesk',sans-serif;font-weight:400;font-size:clamp(22px,3vw,42px);color:var(--ink);transition:color .3s;}
+.cont-item:hover .cont-val{color:var(--accent);}
+
+/* FOOTER */
+footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
+.ft-hl{font-size:clamp(100px,19vw,300px);font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.04em;line-height:.9;color:var(--ink);overflow:hidden;margin-bottom:60px;white-space:nowrap;}
+.ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:80px 0 60px;border-top:1px solid var(--line);}
+@media(max-width:768px){.ft-cols{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:480px){.ft-cols{grid-template-columns:1fr;}}
+.ft-col-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-mute);margin-bottom:20px;}
+.ft-col p,.ft-col address{font-style:normal;font-size:14px;line-height:1.8;color:var(--ink-mute);}
+.ft-col a{display:block;font-size:14px;line-height:1.8;color:var(--ink-mute);transition:color .2s;}
+.ft-col a:hover{color:var(--accent);}
+.ft-mq-wrap{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 0;overflow:hidden;margin-top:40px;}
+.ft-mq{display:flex;width:max-content;white-space:nowrap;}
+.ft-mq span{font-family:'JetBrains Mono',monospace;font-size:14px;color:var(--ink-mute);letter-spacing:.1em;padding-right:40px;}
+.ft-copy{font-family:'JetBrains Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.2em;color:var(--ink-mute);text-align:center;padding:40px 0;}
+
+/* LIGHTBOX */
+.lbx{position:fixed;inset:0;background:rgba(0,0,0,.95);z-index:1000;display:none;align-items:center;justify-content:center;}
+.lbx.on{display:flex;}
+.lbx-close{position:absolute;top:32px;right:32px;font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--ink);background:none;border:none;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;transition:color .2s;}
+.lbx-close:hover{color:var(--accent);}
+.lbx-img{max-width:90vw;max-height:90vh;object-fit:contain;display:block;}
+.lbx-img-wrap{max-width:90vw;max-height:90vh;overflow:hidden;}
+.lbx-ph{width:70vw;height:70vh;max-width:900px;}
+.lbx-prev,.lbx-next{position:absolute;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--ink);background:none;border:none;cursor:pointer;padding:16px;transition:color .2s,transform .2s;}
+.lbx-prev{left:24px;}
+.lbx-next{right:24px;}
+.lbx-prev:hover{color:var(--accent);transform:translateY(-50%) translateX(-4px);}
+.lbx-next:hover{color:var(--accent);transform:translateY(-50%) translateX(4px);}
+.lbx-counter{position:absolute;bottom:32px;left:50%;transform:translateX(-50%);font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);}
+
+/* REDUCED MOTION */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
+}
+</style>
+</head>
+<body>
+
+<!-- CURSOR -->
+<div id="cur-dot"></div>
+<div id="cur-ring"><span class="cr-text">[ СМОТРЕТЬ ]</span></div>
+
+<!-- HEADER -->
+<header id="site-header">
+  <div class="wrap hdr">
+    <a href="#top" class="hdr-logo" aria-label="На главную">
+      <img src="images/logo2.png" alt="Василий Ревякин" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+      <span class="logo-ph" style="display:none;">ВР</span>
+    </a>
+    <nav aria-label="Основная навигация">
+      <a href="#approach"><span class="ni">01&nbsp;·&nbsp;</span>Подход</a>
+      <a href="#corporate"><span class="ni">02&nbsp;·&nbsp;</span>Корпоративы</a>
+      <a href="#weddings"><span class="ni">03&nbsp;·&nbsp;</span>Свадьбы</a>
+      <a href="#price"><span class="ni">04&nbsp;·&nbsp;</span>Стоимость</a>
+      <a href="#contacts"><span class="ni">05&nbsp;·&nbsp;</span>Контакты</a>
+    </nav>
+    <button class="burger" id="burger-btn" aria-label="Меню" aria-expanded="false">
+      <span class="bl"></span><span class="bl"></span>
+    </button>
+  </div>
+</header>
+
+<!-- MOBILE NAV -->
+<nav class="mob-nav" id="mob-nav" aria-label="Мобильная навигация">
+  <button class="mob-close" id="mob-close" aria-label="Закрыть меню">×</button>
+  <a href="#approach" class="mob-link"><span>Подход</span></a>
+  <a href="#corporate" class="mob-link"><span>Корпоративы</span></a>
+  <a href="#weddings" class="mob-link"><span>Свадьбы</span></a>
+  <a href="#price" class="mob-link"><span>Стоимость</span></a>
+  <a href="#geo" class="mob-link"><span>География</span></a>
+  <a href="#faq" class="mob-link"><span>FAQ</span></a>
+  <a href="#contacts" class="mob-link"><span>Контакты</span></a>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="top" aria-label="Главный экран">
+  <div class="hero-grid">
+    <div class="hero-left">
+      <p class="hero-svc">— 01&nbsp;/&nbsp;Василий Ревякин</p>
+      <div class="hero-logo-wrap">
+        <img src="images/logo1.png" alt="Логотип Василий Ревякин" class="hero-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+        <span class="logo-ph" style="display:none;">ВАСИЛИЙ РЕВЯКИН</span>
+      </div>
+      <h1 class="hero-h1" id="hero-h1">Ведущий свадеб, частных и корпоративных событий</h1>
+      <div class="hero-bot">
+        <a href="#contacts" class="btn btn-primary" aria-label="Обсудить событие">
+          <span class="bti"><span class="btt">Обсудить событие</span><span class="btb">Обсудить событие</span></span>
+        </a>
+        <span class="hero-tag">MSK&nbsp;·&nbsp;PNZ&nbsp;·&nbsp;WORLD</span>
+      </div>
+    </div>
+    <div class="hero-right">
+      <div class="ph" style="width:100%;height:100%;">
+        <span class="ph-meta">IMG · 01 · HERO</span>
+        <span class="ph-name">hero.jpg</span>
+        <img src="images/hero.jpg" alt="Василий Ревякин — ведущий" loading="eager" onerror="this.style.display='none';">
+      </div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <p class="hero-scroll" aria-hidden="true">SCROLL&nbsp;↓</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER 1 -->
+<div class="divider" aria-hidden="true" data-word="ВЗГЛЯД">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ВЗГЛЯД&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- APPROACH -->
+<section id="approach" aria-label="Аперитив — цифры">
+  <div class="wrap">
+    <p class="sec-label">— 02&nbsp;/&nbsp;Аперитив</p>
+    <h2 class="sec-h2">Для аперитива — цифры</h2>
+    <div class="app-grid">
+      <div class="app-photo ph">
+        <span class="ph-meta">IMG · 02 · APPROACH</span>
+        <span class="ph-name">approach.jpg</span>
+        <img src="images/approach.jpg" alt="Василий Ревякин на мероприятии" loading="lazy" onerror="this.style.display='none';">
+      </div>
+      <div></div>
+      <div class="app-facts">
+        <div class="fact">
+          <span class="fact-num" data-target="10" data-suffix="+">10+</span>
+          <div class="fact-line"></div>
+          <p class="fact-lbl">лет веду мероприятия</p>
+        </div>
+        <div class="fact">
+          <span class="fact-num" data-target="80" data-suffix="+">80+</span>
+          <div class="fact-line"></div>
+          <p class="fact-lbl">событий в 2025 году</p>
+        </div>
+        <div class="fact">
+          <span class="fact-num" data-target="8">8</span>
+          <div class="fact-line"></div>
+          <p class="fact-lbl">лет актёр театра</p>
+        </div>
+        <div class="fact">
+          <span class="fact-num" data-target="7">7</span>
+          <div class="fact-line"></div>
+          <p class="fact-lbl">городов в географии мероприятий</p>
+        </div>
+        <div class="fact">
+          <span class="fact-num" data-target="3" data-suffix="+">3+</span>
+          <div class="fact-line"></div>
+          <p class="fact-lbl">года курсов устной речи, импровизации, ведения тренингов</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER 2 -->
+<div class="divider" aria-hidden="true" data-word="СМЫСЛЫ">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;СМЫСЛЫ&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- WHY -->
+<section id="why" aria-label="Почему я">
+  <div class="why-bg-wrap">
+    <div class="ph" style="width:100%;height:100%;">
+      <span class="ph-meta">IMG · 03 · WHY-BG</span>
+      <span class="ph-name">why-bg.jpg</span>
+      <img src="images/why-bg.jpg" alt="" loading="lazy" onerror="this.style.display='none';">
+    </div>
+    <div class="why-ov"></div>
+    <div class="why-ov2"></div>
+  </div>
+  <div class="why-c wrap">
+    <p class="sec-label">— 03&nbsp;/&nbsp;Почему я</p>
+    <h2 class="sec-h2">Почему я?</h2>
+    <ul class="why-list">
+      <li class="why-item">
+        <div class="why-dash"></div>
+        <p class="why-text">свой стиль, импровизация и юмор в контексте события</p>
+      </li>
+      <li class="why-item">
+        <div class="why-dash"></div>
+        <p class="why-text">интеллигентный подход, осознанная устная речь, владение голосом</p>
+      </li>
+      <li class="why-item">
+        <div class="why-dash"></div>
+        <p class="why-text">авторские ходы; без принуждения гостей к шаблонным конкурсам; согласование активностей</p>
+      </li>
+      <li class="why-item">
+        <div class="why-dash"></div>
+        <p class="why-text">создание атмосферы лёгкости, улыбок и пауз до мурашек</p>
+      </li>
+      <li class="why-item">
+        <div class="why-dash"></div>
+        <p class="why-text">я УТП для искренних, открытых, культурных людей</p>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DIVIDER 3 -->
+<div class="divider" aria-hidden="true" data-word="ПАУЗА">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ПАУЗА&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- PAUSE / MANIFEST -->
+<section id="pause" aria-label="Манифест">
+  <div class="pause-bg-wrap">
+    <div class="ph" style="width:100%;height:100%;">
+      <span class="ph-meta">IMG · 04 · PAUSE-BG</span>
+      <span class="ph-name">pause-bg.jpg</span>
+      <img src="images/pause-bg.jpg" alt="" loading="lazy" onerror="this.style.display='none';">
+    </div>
+    <div class="pause-ov"></div>
+  </div>
+  <div class="pause-c wrap">
+    <p class="sec-label">— 04&nbsp;/&nbsp;Манифест</p>
+    <div class="pause-text" id="pause-text">
+      <span class="pause-line"><span class="pause-line-in">Мы привыкли думать, что праздник — это просто развлечение.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Но любое сильное событие наполняют <span class="acc">смыслы</span>,</span></span>
+      <span class="pause-line"><span class="pause-line-in">его предваряет история.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Несколько лет я был программистом — учился структурировать хаос.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Опыт в театре дал мне инструменты доставки смыслов —</span></span>
+      <span class="pause-line"><span class="pause-line-in">голос, паузу, жест.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Мероприятия научили чувствовать публику.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Быть <span class="acc">архитектором событий и эмоций</span>.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Я создаю <span class="acc">безопасное комфортное пространство</span>,</span></span>
+      <span class="pause-line"><span class="pause-line-in">где люди сопричастны, понимают атмосферу и могут быть собой.</span></span>
+      <span class="pause-line"><span class="pause-line-in">Я создаю события для тех, кто ценит смыслы.</span></span>
+    </div>
+    <p class="pause-sig">Василий Ревякин, 2025</p>
+  </div>
+</section>
+
+<!-- DIVIDER 4 -->
+<div class="divider" aria-hidden="true" data-word="ЖЕСТ">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ЖЕСТ&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- CORPORATE -->
+<section id="corporate" aria-label="Корпоративы">
+  <div class="wrap">
+    <p class="sec-label">— 05&nbsp;/&nbsp;Корпоративы</p>
+    <h2 class="sec-h2">Корпоративы</h2>
+    <div class="corp-grid">
+      <div class="corp-text">
+        <p>Я понимаю разницу между новогодним банкетом и юбилеем компании, между конференцией и закрытым ужином для топ-менеджмента. Очень важно, чтобы ведущий во время корпоративного вечера считывал тон бренда, темп вечера и аудиторию.</p>
+        <p>Я работаю с компаниями, где ценят выверенный сценарий, точную интонацию и отсутствие пошлости. Согласовываем активности заранее, не выводим людей на сцену без согласия, не превращаем вечер в шоу аниматоров. Работаю по договору.</p>
+        <p>Ведущий на корпоратив Москва, Пенза, Саранск, выезд возможен в любую точку России и мира.</p>
+      </div>
+      <div></div>
+      <div class="corp-photo ph">
+        <span class="ph-meta">IMG · 05 · CORPORATE</span>
+        <span class="ph-name">corporate.jpg</span>
+        <img src="images/corporate.jpg" alt="Корпоративное мероприятие" loading="lazy" onerror="this.style.display='none';">
+      </div>
+    </div>
+
+    <p class="trust-lbl">— Мне доверяют —</p>
+
+    <!-- Logo strip -->
+    <div class="logo-strip-wrap">
+      <div class="logo-strip" id="logo-strip" aria-label="Компании-клиенты">
+        <div class="logo-item"><img src="images/logo-co-01.svg" alt="Клиент 1" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
+        <div class="logo-item"><img src="images/logo-co-02.svg" alt="Клиент 2" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
+        <div class="logo-item"><img src="images/logo-co-03.svg" alt="Клиент 3" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/logo-co-04.svg" alt="Клиент 4" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
+        <div class="logo-item"><img src="images/logo-co-05.svg" alt="Клиент 5" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/logo-co-06.svg" alt="Клиент 6" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/logo-co-07.svg" alt="Клиент 7" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/logo-co-08.svg" alt="Клиент 8" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/logo-co-09.svg" alt="Клиент 9" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/logo-co-10.svg" alt="Клиент 10" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
+        <!-- duplicate for loop -->
+        <div class="logo-item"><img src="images/logo-co-01.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
+        <div class="logo-item"><img src="images/logo-co-02.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
+        <div class="logo-item"><img src="images/logo-co-03.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/logo-co-04.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
+        <div class="logo-item"><img src="images/logo-co-05.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/logo-co-06.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/logo-co-07.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/logo-co-08.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/logo-co-09.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/logo-co-10.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
+      </div>
+    </div>
+
+    <!-- Corporate gallery -->
+    <div class="gallery-grid" id="corp-gallery" data-gallery="corp">
+      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·01</span><span class="ph-name">corp-01</span><img src="images/corp-01.jpg" alt="Корпоратив 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·02</span><span class="ph-name">corp-02</span><img src="images/corp-02.jpg" alt="Корпоратив 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·03</span><span class="ph-name">corp-03</span><img src="images/corp-03.jpg" alt="Корпоратив 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·04</span><span class="ph-name">corp-04</span><img src="images/corp-04.jpg" alt="Корпоратив 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·05</span><span class="ph-name">corp-05</span><img src="images/corp-05.jpg" alt="Корпоратив 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·06</span><span class="ph-name">corp-06</span><img src="images/corp-06.jpg" alt="Корпоратив 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·07</span><span class="ph-name">corp-07</span><img src="images/corp-07.jpg" alt="Корпоратив 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·08</span><span class="ph-name">corp-08</span><img src="images/corp-08.jpg" alt="Корпоратив 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·09</span><span class="ph-name">corp-09</span><img src="images/corp-09.jpg" alt="Корпоратив 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·10</span><span class="ph-name">corp-10</span><img src="images/corp-10.jpg" alt="Корпоратив 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+    </div>
+
+    <p class="vid-label">— Корпоративное юмористическое видео</p>
+    <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+  </div>
+</section>
+
+<!-- DIVIDER 5 -->
+<div class="divider" aria-hidden="true" data-word="ГОЛОС">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ГОЛОС&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- WEDDINGS -->
+<section id="weddings" aria-label="Свадьбы">
+  <div class="wrap">
+    <p class="sec-label">— 06&nbsp;/&nbsp;Свадьбы</p>
+    <h2 class="sec-h2">Свадьбы</h2>
+    <div class="wed-layout">
+      <div class="wed-vid-sticky">
+        <div class="wed-vid-box">
+          <div class="ph" style="width:100%;height:100%;">
+            <span class="ph-meta">VIDEO · 9:16 · REEL</span>
+            <span class="ph-name">wedding-reel.mp4</span>
+            <video id="wedding-video" src="videos/wedding-reel.mp4" muted loop playsinline preload="metadata" aria-label="Свадебный шоурил"></video>
+          </div>
+        </div>
+      </div>
+      <div class="wed-text">
+        <p>Ведущий на свадьбу в Москве — для тех, кто хочет, чтобы день был про них, а не про сценарий из интернета. Я не работаю по шаблону: каждая свадьба собирается из истории пары, темпа гостей и характера площадки.</p>
+        <p>Никаких шаблонных конкурсов, выкупов туфли и тостов «по очереди». Ведущий мероприятий с театральным бэкграундом — это про паузу, в которой звучит важное, про юмор без сальностей, про умение держать атмосферу от первой встречи до финального танца.</p>
+        <p>Работаю как ведущий Пенза, ведущий Саранск, Москва и любая география России и зарубежья.</p>
+
+        <!-- Wedding gallery -->
+        <div class="gallery-grid" id="wed-gallery" data-gallery="wed" style="margin-top:60px;">
+          <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·01</span><span class="ph-name">wed-01</span><img src="images/wed-01.jpg" alt="Свадьба 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·02</span><span class="ph-name">wed-02</span><img src="images/wed-02.jpg" alt="Свадьба 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·03</span><span class="ph-name">wed-03</span><img src="images/wed-03.jpg" alt="Свадьба 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·04</span><span class="ph-name">wed-04</span><img src="images/wed-04.jpg" alt="Свадьба 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·05</span><span class="ph-name">wed-05</span><img src="images/wed-05.jpg" alt="Свадьба 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·06</span><span class="ph-name">wed-06</span><img src="images/wed-06.jpg" alt="Свадьба 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·07</span><span class="ph-name">wed-07</span><img src="images/wed-07.jpg" alt="Свадьба 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·08</span><span class="ph-name">wed-08</span><img src="images/wed-08.jpg" alt="Свадьба 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·09</span><span class="ph-name">wed-09</span><img src="images/wed-09.jpg" alt="Свадьба 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+          <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·10</span><span class="ph-name">wed-10</span><img src="images/wed-10.jpg" alt="Свадьба 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+        </div>
+
+        <p class="vid-label">— Свадебный шоурил 2025</p>
+        <iframe class="vid-embed" src="https://vkvideo.ru/video_ext.php?oid=932999&id=456239496&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Свадебный шоурил 2025"></iframe>
+
+        <p class="vid-label">— Юмористическое интервью на свадьбе</p>
+        <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+
+        <p class="vid-label">— Церемония</p>
+        <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+
+        <!-- Reviews -->
+        <p class="rev-label">— Отзывы</p>
+        <div class="rev-wrap">
+          <div class="rev-track" id="rev-track">
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-01.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Анна и Дмитрий</p>
+              </div>
+              <p class="rev-text">Василий провёл нашу свадьбу так, что гости до сих пор вспоминают паузы перед тостами и его юмор. Никаких шаблонных конкурсов — только живая атмосфера. Рекомендуем без оговорок.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-02.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Екатерина С.</p>
+              </div>
+              <p class="rev-text">Искали ведущего, который не превратит вечер в дискотеку для тёти Любы. Василий считал нас с первой встречи, предложил сценарий под наш характер. Все гости отметили вкус и интеллигентность.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-03.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">ООО Северсталь-Девелопмент</p>
+              </div>
+              <p class="rev-text">Корпоративный вечер на 180 человек. Уровень подачи, точная работа с регламентом, отсутствие пошлости. Будем работать ещё.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-04.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Мария и Артём</p>
+              </div>
+              <p class="rev-text">Боялись, что будет «как у всех». Получили день, который ощущался как наш. Спасибо за паузы, за юмор и за то, что не вытащили родителей на сцену с микрофоном.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-05.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Ольга К.</p>
+              </div>
+              <p class="rev-text">Василий — редкий случай ведущего, которого слушают. Голос, темп, чувство аудитории. Не работает по шаблону. Рекомендую друзьям, рекомендую сюда.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-06.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Газпромбанк, корпоратив 2024</p>
+              </div>
+              <p class="rev-text">Закрытый ужин для топ-менеджмента. Тон вечера был выдержан безупречно. Спасибо за профессионализм и за то, что не пришлось ничего переделывать на ходу.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-07.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Полина и Никита</p>
+              </div>
+              <p class="rev-text">Хотели свадьбу без банальщины. Василий собрал день из нашей истории — это было видно в каждой детали ведения. Гости говорили: «Где вы его нашли?».</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-08.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Ирина М.</p>
+              </div>
+              <p class="rev-text">Юбилей компании, 120 гостей. Сценарий согласовывался долго и тщательно — и это окупилось. Ни одной неловкой минуты за вечер.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-09.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Сбер Премьер</p>
+              </div>
+              <p class="rev-text">Мероприятие для клиентов высокого сегмента. Ведущий уровня, который соответствует продукту. Без преувеличений.</p>
+            </div>
+            <div class="rev-card">
+              <div class="rev-hdr">
+                <div class="rev-av ph"><img src="images/review-10.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Светлана и Павел</p>
+              </div>
+              <p class="rev-text">Свадьба за границей, всё прошло так, будто мы дома. Василий взял на себя коммуникацию с площадкой, организовал ритм вечера, оставил нам только эмоции. Низкий поклон.</p>
+            </div>
+          </div>
+        </div>
+        <div class="rev-nav">
+          <button class="rev-btn" id="rev-prev" aria-label="Предыдущий отзыв">←</button>
+          <button class="rev-btn" id="rev-next" aria-label="Следующий отзыв">→</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER 6 -->
+<div class="divider" aria-hidden="true" data-word="ВДОХ">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ВДОХ&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- PRICE -->
+<section id="price" aria-label="Стоимость">
+  <div class="wrap">
+    <p class="sec-label">— 07&nbsp;/&nbsp;Стоимость</p>
+    <h2 class="sec-h2">Стоимость</h2>
+    <div class="price-c">
+      <div class="price-num">
+        <span class="price-pfx">от&nbsp;</span><span id="price-counter">80&nbsp;000</span><span class="cur">&nbsp;₽</span>
+      </div>
+      <p class="price-body">Финальная стоимость зависит от формата, даты, географии и продолжительности события. Под каждое мероприятие я собираю индивидуальное предложение — пишите, обсудим.</p>
+      <a href="#contacts" class="btn btn-primary">
+        <span class="bti"><span class="btt">Получить предложение</span><span class="btb">Получить предложение</span></span>
+      </a>
+      <p class="price-sub">Заказать ведущего на свадьбу или корпоратив в Москве — это всегда история про доверие. Я не публикую готовых пакетов, потому что не верю в шаблонные мероприятия. Ведущий мероприятий — это не строка в смете, это человек, который держит ваш вечер в руках. Стоимость обсуждаем после короткого разговора о вашем событии.</p>
+    </div>
+  </div>
+</section>
+
+<!-- DIVIDER 7 -->
+<div class="divider" aria-hidden="true" data-word="КОНТАКТ">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;КОНТАКТ&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- GEO -->
+<section id="geo" aria-label="География">
+  <div class="wrap">
+    <p class="sec-label">— 08&nbsp;/&nbsp;География</p>
+    <h2 class="sec-h2">География</h2>
+    <p class="geo-text">Работаю по всей России и за рубежом. Базовые города — <strong>Москва</strong>, <strong>Пенза</strong>, <strong>Саранск</strong>. Готов к выездам в любую точку мира — от загородной площадки в Подмосковье до свадьбы на побережье Италии.</p>
+    <ul class="geo-list">
+      <li class="geo-item geo-reveal"><span class="geo-idx">01</span>&nbsp;·&nbsp;Москва</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">02</span>&nbsp;·&nbsp;Пенза</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">03</span>&nbsp;·&nbsp;Саранск</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">04</span>&nbsp;·&nbsp;Саратов</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">05</span>&nbsp;·&nbsp;Сочи</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">06</span>&nbsp;·&nbsp;Санкт-Петербург</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">07</span>&nbsp;·&nbsp;Ростов-на-Дону</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">08</span>&nbsp;·&nbsp;Выезды по России</li>
+      <li class="geo-item geo-reveal"><span class="geo-idx">09</span>&nbsp;·&nbsp;Выезды за рубеж</li>
+    </ul>
+  </div>
+</section>
+
+<!-- DIVIDER 8 -->
+<div class="divider" aria-hidden="true" data-word="ВЫДОХ">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ВЫДОХ&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- FAQ -->
+<section id="faq" aria-label="Часто спрашивают">
+  <div class="wrap">
+    <p class="sec-label">— 09&nbsp;/&nbsp;Вопросы</p>
+    <h2 class="sec-h2">Часто спрашивают</h2>
+    <ul class="faq-list">
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">01</span><h3 class="faq-qt">Как происходит подготовка к мероприятию?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Сначала короткий разговор — знакомство и понимание задачи. Затем встреча или созвон на 1–1.5 часа: собираю историю, характер, акценты вечера. Готовлю сценарий, согласовываем активности, шутки, тосты — никаких сюрпризов для вас в день события. За неделю до мероприятия — финальная сверка с площадкой, диджеем, фотографом.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">02</span><h3 class="faq-qt">Вы работаете с подрядчиками?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Да, у меня есть круг проверенных диджеев, фотографов, видеографов, декораторов в Москве и Пензе. Могу рекомендовать, могу работать с вашими — без разницы. Главное, чтобы все понимали ритм вечера.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">03</span><h3 class="faq-qt">Что если гости попадутся скучные?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Скучных гостей не бывает — бывает ведущий, который не нашёл к ним подход. Моя задача — создать атмосферу, в которой даже самые сдержанные расслабляются. Без принуждения, без вытаскивания на сцену.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">04</span><h3 class="faq-qt">Вы поёте, танцуете, проводите конкурсы?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Веду — это моё. Пою и танцую только если это уместно в контексте конкретного события. Конкурсы — авторские, согласованные с вами, без шаблонов из 2000-х.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">05</span><h3 class="faq-qt">Сколько времени вы работаете на мероприятии?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Стандартно — от начала сбора гостей до финального танца. Это в среднем 6–8 часов. Если нужно больше — обсуждаем отдельно.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">06</span><h3 class="faq-qt">Работаете за пределами Москвы и Пензы?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Да. Выезд по России и за рубеж — обсуждается отдельно: логистика, проживание, тайминг. Делал свадьбы в Сочи, Казани, Петербурге, на загородных площадках Подмосковья. К выезду за рубеж готов.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">07</span><h3 class="faq-qt">Как происходит оплата?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Предоплата 30% — фиксирует дату в моём календаре. Остаток — в день события или накануне, как удобно. Договор обязателен.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">08</span><h3 class="faq-qt">Что входит в стоимость?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Подготовка, встречи, сценарий, ведение события, координация с подрядчиками в день мероприятия. Микрофон и базовое оборудование — на стороне площадки или диджея, согласовываем заранее.</div></div>
+      </li>
+      <li class="faq-item">
+        <button class="faq-q" aria-expanded="false"><span class="faq-idx">09</span><h3 class="faq-qt">Можно посмотреть видео с реальных мероприятий?</h3><span class="faq-tog">+</span></button>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Да, видеоматериалы есть в разделах «Корпоративы» и «Свадьбы» выше. Если нужны дополнительные примеры под ваш формат — пришлю в личной переписке.</div></div>
+      </li>
+    </ul>
+  </div>
+</section>
+
+<!-- DIVIDER 9 -->
+<div class="divider" aria-hidden="true" data-word="ПОКЛОН">
+  <div class="div-inner">
+    <div class="div-vline"></div>
+    <div class="div-row">
+      <div class="div-hline"></div>
+      <p class="div-word">—&nbsp;ПОКЛОН&nbsp;—</p>
+      <div class="div-hline"></div>
+    </div>
+    <div class="div-vline"></div>
+  </div>
+</div>
+
+<!-- CONTACTS -->
+<section id="contacts" aria-label="Контакты">
+  <div class="wrap">
+    <p class="sec-label">— 10&nbsp;/&nbsp;Свяжемся</p>
+    <h2 class="contacts-h2 sec-h2" id="contacts-h2">Поговорим</h2>
+    <p class="contacts-sub">Напишите в удобный мессенджер или позвоните. Отвечаю в течение дня. Обсудим формат события, дату, детали — без обязательств.</p>
+    <ul class="cont-list">
+      <li><a href="tel:+79999999999" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Телефон</span><span class="cont-val">+7 999 999 99 99</span></a></li>
+      <li><a href="https://t.me/revyakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Telegram</span><span class="cont-val">@revyakin</span></a></li>
+      <li><a href="https://wa.me/79999999999" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">WhatsApp</span><span class="cont-val">+7 999 999 99 99</span></a></li>
+      <li><a href="mailto:hello@revyakin.ru" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Email</span><span class="cont-val">hello@revyakin.ru</span></a></li>
+      <li><a href="https://instagram.com/revyakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Instagram</span><span class="cont-val">@revyakin</span></a></li>
+    </ul>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="ft-hl" id="ft-hl">ПОГОВОРИМ</div>
+    <a href="#contacts" class="btn btn-primary" style="margin-bottom:80px;">
+      <span class="bti"><span class="btt">Написать</span><span class="btb">Написать</span></span>
+    </a>
+    <div class="ft-cols">
+      <div class="ft-col">
+        <p class="ft-col-lbl">— Василий Ревякин</p>
+        <p>Ведущий свадеб<br>и корпоративных событий</p>
+      </div>
+      <div class="ft-col">
+        <p class="ft-col-lbl">— Разделы</p>
+        <a href="#approach">Подход</a>
+        <a href="#corporate">Корпоративы</a>
+        <a href="#weddings">Свадьбы</a>
+        <a href="#price">Стоимость</a>
+        <a href="#geo">География</a>
+        <a href="#faq">FAQ</a>
+        <a href="#contacts">Контакты</a>
+      </div>
+      <div class="ft-col">
+        <p class="ft-col-lbl">— Связь</p>
+        <address>
+          <a href="tel:+79999999999">+7 999 999 99 99</a>
+          <a href="https://t.me/revyakin" target="_blank" rel="noopener">@revyakin</a>
+          <a href="mailto:hello@revyakin.ru">hello@revyakin.ru</a>
+        </address>
+      </div>
+      <div class="ft-col">
+        <p class="ft-col-lbl">— География</p>
+        <p>Москва<br>Пенза<br>Саранск<br>Россия и зарубеж</p>
+      </div>
+    </div>
+  </div>
+  <div class="ft-mq-wrap">
+    <div class="ft-mq" id="ft-mq">
+      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
+      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
+      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
+      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
+    </div>
+  </div>
+  <p class="ft-copy">© 2025&nbsp;·&nbsp;Все права защищены</p>
+</footer>
+
+<!-- LIGHTBOX -->
+<div class="lbx" id="lightbox" role="dialog" aria-modal="true" aria-label="Просмотр фото">
+  <button class="lbx-close" id="lbx-close" aria-label="Закрыть">×</button>
+  <button class="lbx-prev" id="lbx-prev" aria-label="Предыдущее фото">←</button>
+  <div class="lbx-img-wrap">
+    <div class="ph lbx-ph" id="lbx-ph">
+      <span class="ph-name" id="lbx-name">—</span>
+      <img id="lbx-img" class="lbx-img" src="" alt="" style="display:none;">
+    </div>
+  </div>
+  <button class="lbx-next" id="lbx-next" aria-label="Следующее фото">→</button>
+  <p class="lbx-counter" id="lbx-counter">01 / 10</p>
+</div>
+
+<script>
+(function(){
+'use strict';
+
+const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isTouch = !window.matchMedia('(hover: hover)').matches;
+
+/* ─── LENIS ─── */
+let lenis;
+if (!prefersReduced) {
+  lenis = new Lenis({ lerp: 0.1, smoothWheel: true });
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add((time) => { lenis.raf(time * 1000); });
+  gsap.ticker.lagSmoothing(0);
+}
+
+/* ─── GSAP SETUP ─── */
+gsap.registerPlugin(ScrollTrigger);
+
+/* ─── CUSTOM CURSOR ─── */
+if (!isTouch) {
+  const dot = document.getElementById('cur-dot');
+  const ring = document.getElementById('cur-ring');
+  let mx = 0, my = 0, rx = 0, ry = 0;
+
+  document.addEventListener('mousemove', e => {
+    mx = e.clientX; my = e.clientY;
+    gsap.set(dot, { x: mx, y: my });
+  });
+
+  (function animRing() {
+    rx += (mx - rx) * 0.15;
+    ry += (my - ry) * 0.15;
+    gsap.set(ring, { x: rx, y: ry });
+    requestAnimationFrame(animRing);
+  })();
+
+  document.querySelectorAll('a, button, .faq-q, .rev-btn, .gi, .logo-item').forEach(el => {
+    el.addEventListener('mouseenter', () => {
+      if (el.classList.contains('gi')) {
+        document.body.classList.add('cur-gallery');
+      } else {
+        document.body.classList.add('cur-hover');
+      }
+    });
+    el.addEventListener('mouseleave', () => {
+      document.body.classList.remove('cur-hover', 'cur-gallery');
+    });
+  });
+}
+
+/* ─── HEADER ─── */
+const header = document.getElementById('site-header');
+ScrollTrigger.create({
+  start: 'top -80',
+  onUpdate: self => {
+    header.classList.toggle('scrolled', self.scroll() > 80);
+  }
+});
+
+/* ─── MOBILE MENU ─── */
+const burger = document.getElementById('burger-btn');
+const mobNav = document.getElementById('mob-nav');
+const mobClose = document.getElementById('mob-close');
+
+function openMenu() {
+  mobNav.classList.add('open');
+  burger.setAttribute('aria-expanded', 'true');
+  document.body.style.overflow = 'hidden';
+  if (!prefersReduced) {
+    gsap.from('.mob-link span', {
+      yPercent: 100, stagger: 0.08, duration: 0.6,
+      ease: 'power3.out', delay: 0.1
+    });
+  }
+}
+function closeMenu() {
+  mobNav.classList.remove('open');
+  burger.setAttribute('aria-expanded', 'false');
+  document.body.style.overflow = '';
+}
+burger.addEventListener('click', openMenu);
+mobClose.addEventListener('click', closeMenu);
+mobNav.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+
+/* ─── SPLIT TYPE UTILITY ─── */
+function splitAndReveal(el, trigger, delay = 0) {
+  if (!el) return;
+  const split = new SplitType(el, { types: 'words' });
+  split.words.forEach(w => {
+    const wrapper = document.createElement('span');
+    wrapper.style.cssText = 'overflow:hidden;display:inline-block;vertical-align:top;padding-bottom:.1em;';
+    w.parentNode.insertBefore(wrapper, w);
+    wrapper.appendChild(w);
+  });
+  if (prefersReduced) return;
+  gsap.from(split.words, {
+    yPercent: 105,
+    duration: 0.9,
+    stagger: 0.05,
+    ease: 'power3.out',
+    delay,
+    scrollTrigger: trigger ? { trigger: el, start: 'top 85%' } : null
+  });
+}
+
+/* ─── HERO H1 ─── */
+window.addEventListener('load', () => {
+  splitAndReveal(document.getElementById('hero-h1'), false, 0.3);
+});
+
+/* ─── SECTION H2 REVEALS ─── */
+document.querySelectorAll('.sec-h2').forEach(h2 => splitAndReveal(h2, true));
+splitAndReveal(document.getElementById('contacts-h2'), true);
+
+/* ─── FOOTER HEADLINE ─── */
+splitAndReveal(document.getElementById('ft-hl'), true);
+
+/* ─── CLIP-PATH REVEAL (general content) ─── */
+function revealClip(els) {
+  els.forEach(el => {
+    if (prefersReduced) return;
+    gsap.from(el, {
+      clipPath: 'inset(100% 0 0 0)',
+      duration: 0.9,
+      ease: 'cubic-bezier(0.7, 0, 0.2, 1)',
+      scrollTrigger: { trigger: el, start: 'top 88%' }
+    });
+  });
+}
+revealClip(document.querySelectorAll('.sec-label, .corp-text p, .wed-text p, .contacts-sub, .price-body, .price-sub, .geo-text, .pause-sig'));
+
+/* ─── WHY ITEMS ─── */
+document.querySelectorAll('.why-item').forEach((item, i) => {
+  if (prefersReduced) return;
+  gsap.from(item, {
+    clipPath: 'inset(100% 0 0 0)',
+    duration: 0.9,
+    ease: 'cubic-bezier(0.7,0,.2,1)',
+    scrollTrigger: { trigger: item, start: 'top 88%' },
+    delay: i * 0.08
+  });
+});
+
+/* ─── GEO LIST ─── */
+document.querySelectorAll('.geo-reveal').forEach((item, i) => {
+  if (prefersReduced) return;
+  gsap.from(item, {
+    clipPath: 'inset(100% 0 0 0)',
+    duration: 0.7,
+    ease: 'cubic-bezier(0.7,0,.2,1)',
+    scrollTrigger: { trigger: item, start: 'top 90%' },
+    delay: i * 0.08
+  });
+});
+
+/* ─── DIVIDERS ─── */
+document.querySelectorAll('.divider').forEach(div => {
+  const hlines = div.querySelectorAll('.div-hline');
+  const vlines = div.querySelectorAll('.div-vline');
+  const wordEl = div.querySelector('.div-word');
+
+  if (prefersReduced) {
+    hlines.forEach(l => l.style.width = '40%');
+    return;
+  }
+
+  const tl = gsap.timeline({
+    scrollTrigger: { trigger: div, start: 'top 70%', once: true }
+  });
+  tl.to(hlines, { width: '40%', duration: 1.2, ease: 'power3.out' })
+    .to(vlines, { height: 60, duration: 0.8, ease: 'power3.out' }, 0)
+    .from(wordEl, { opacity: 0, duration: 0.5 }, 0.4);
+
+  /* letter-spacing on scroll progress */
+  ScrollTrigger.create({
+    trigger: div,
+    start: 'top bottom',
+    end: 'bottom top',
+    onUpdate: self => {
+      const ls = 0.4 + self.progress * 0.4;
+      wordEl.style.letterSpacing = ls + 'em';
+    }
+  });
+});
+
+/* ─── FACT COUNTERS ─── */
+document.querySelectorAll('.fact-num').forEach(el => {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const line = el.nextElementSibling;
+
+  if (prefersReduced) {
+    el.textContent = target + suffix;
+    if (line && line.classList.contains('fact-line')) line.style.width = '40px';
+    return;
+  }
+
+  let triggered = false;
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 85%',
+    onEnter: () => {
+      if (triggered) return;
+      triggered = true;
+      const obj = { val: 0 };
+      gsap.to(obj, {
+        val: target,
+        duration: 1.8,
+        ease: 'power3.out',
+        onUpdate: () => { el.textContent = Math.round(obj.val) + suffix; }
+      });
+      if (line && line.classList.contains('fact-line')) {
+        gsap.to(line, { width: 40, duration: 1.2, ease: 'power3.out' });
+      }
+    }
+  });
+});
+
+/* ─── PRICE COUNTER ─── */
+(function() {
+  const el = document.getElementById('price-counter');
+  if (!el) return;
+  let triggered = false;
+  ScrollTrigger.create({
+    trigger: el,
+    start: 'top 85%',
+    onEnter: () => {
+      if (triggered) return;
+      triggered = true;
+      if (prefersReduced) { el.textContent = '80 000'; return; }
+      const obj = { val: 0 };
+      gsap.to(obj, {
+        val: 80000, duration: 1.8, ease: 'power3.out',
+        onUpdate: () => {
+          el.textContent = Math.round(obj.val).toLocaleString('ru-RU').replace(/,/g, ' ');
+        }
+      });
+    }
+  });
+})();
+
+/* ─── APPROACH PHOTO CLIP ─── */
+(function() {
+  const photo = document.querySelector('.app-photo');
+  if (!photo || prefersReduced) return;
+  gsap.from(photo, {
+    clipPath: 'inset(100% 0 0 0)',
+    duration: 1.1,
+    ease: 'cubic-bezier(0.7,0,.2,1)',
+    scrollTrigger: { trigger: photo, start: 'top 85%' }
+  });
+})();
+
+/* ─── PAUSE SCROLL-DRIVEN TEXT ─── */
+(function() {
+  const lines = document.querySelectorAll('.pause-line-in');
+  if (!lines.length) return;
+  if (prefersReduced) return;
+
+  lines.forEach((line, i) => {
+    gsap.from(line, {
+      clipPath: 'inset(110% 0 -10% 0)',
+      duration: 0.1,
+      scrollTrigger: {
+        trigger: '#pause',
+        start: 'top 80%',
+        end: 'bottom 60%',
+        scrub: 1,
+        onUpdate: self => {
+          const step = 1 / lines.length;
+          const progress = Math.max(0, Math.min(1, (self.progress - i * step * 0.8) / (step * 1.5)));
+          gsap.set(line, {
+            clipPath: `inset(${(1 - progress) * 110}% 0 -10% 0)`
+          });
+        }
+      }
+    });
+  });
+})();
+
+/* ─── GALLERY SHUTTER + LIGHTBOX SETUP ─── */
+const galleries = {
+  corp: Array.from(document.querySelectorAll('#corp-gallery .gi')),
+  wed: Array.from(document.querySelectorAll('#wed-gallery .gi'))
+};
+
+Object.values(galleries).flat().forEach(item => {
+  const shutter = item.querySelector('.gi-shutter');
+  if (!shutter || prefersReduced) return;
+  gsap.to(shutter, {
+    scaleY: 0,
+    transformOrigin: 'top',
+    duration: 0.8,
+    ease: 'cubic-bezier(0.7,0,.2,1)',
+    scrollTrigger: { trigger: item, start: 'top 90%' }
+  });
+  item.addEventListener('click', () => openLightbox(item));
+});
+
+/* ─── LIGHTBOX ─── */
+const lbx = document.getElementById('lightbox');
+const lbxImg = document.getElementById('lbx-img');
+const lbxName = document.getElementById('lbx-name');
+const lbxPh = document.getElementById('lbx-ph');
+const lbxCounter = document.getElementById('lbx-counter');
+let lbxItems = [], lbxCurrent = 0, lbxGallery = null;
+
+function openLightbox(item) {
+  const galleryId = item.closest('[data-gallery]').dataset.gallery;
+  lbxGallery = galleryId;
+  lbxItems = galleries[galleryId];
+  lbxCurrent = lbxItems.indexOf(item);
+  showLbxItem(lbxCurrent);
+  lbx.classList.add('on');
+  document.body.style.overflow = 'hidden';
+  if (lenis) lenis.stop();
+  lbx.focus();
+}
+
+function showLbxItem(idx) {
+  lbxCurrent = (idx + lbxItems.length) % lbxItems.length;
+  const item = lbxItems[lbxCurrent];
+  const img = item.querySelector('img');
+  const phName = item.querySelector('.ph-name');
+  lbxCounter.textContent = String(lbxCurrent + 1).padStart(2, '0') + ' / ' + String(lbxItems.length).padStart(2, '0');
+  if (img && img.complete && img.naturalWidth > 0) {
+    lbxImg.src = img.src;
+    lbxImg.alt = img.alt;
+    lbxImg.style.display = 'block';
+    lbxName.textContent = phName ? phName.textContent : '';
+  } else {
+    lbxImg.style.display = 'none';
+    lbxName.textContent = phName ? phName.textContent : '—';
+  }
+  if (!prefersReduced) {
+    gsap.from(lbxPh, { clipPath: 'inset(100% 0 0 0)', duration: 0.6, ease: 'power3.out' });
+  }
+}
+
+function closeLightbox() {
+  lbx.classList.remove('on');
+  document.body.style.overflow = '';
+  if (lenis) lenis.start();
+}
+
+document.getElementById('lbx-close').addEventListener('click', closeLightbox);
+lbx.addEventListener('click', e => { if (e.target === lbx) closeLightbox(); });
+document.getElementById('lbx-prev').addEventListener('click', () => showLbxItem(lbxCurrent - 1));
+document.getElementById('lbx-next').addEventListener('click', () => showLbxItem(lbxCurrent + 1));
+document.addEventListener('keydown', e => {
+  if (!lbx.classList.contains('on')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') showLbxItem(lbxCurrent - 1);
+  if (e.key === 'ArrowRight') showLbxItem(lbxCurrent + 1);
+});
+
+/* ─── FAQ ─── */
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const item = btn.closest('.faq-item');
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(o => {
+      o.classList.remove('open');
+      o.querySelector('.faq-q').setAttribute('aria-expanded', 'false');
+      o.querySelector('.faq-tog').textContent = '+';
+    });
+    if (!isOpen) {
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.querySelector('.faq-tog').textContent = '−';
+    }
+  });
+});
+
+/* ─── REVIEWS CAROUSEL ─── */
+(function() {
+  const track = document.getElementById('rev-track');
+  if (!track) return;
+  let pos = 0, isDragging = false, startX = 0, startPos = 0;
+  const cardW = () => track.children[0]?.offsetWidth + 24 || 404;
+
+  function setPos(x, animated = false) {
+    const maxPos = -(track.scrollWidth / 2 - track.parentElement.offsetWidth);
+    pos = Math.max(maxPos, Math.min(0, x));
+    if (animated) {
+      gsap.to(track, { x: pos, duration: 0.5, ease: 'power3.out' });
+    } else {
+      gsap.set(track, { x: pos });
+    }
+  }
+
+  document.getElementById('rev-prev')?.addEventListener('click', () => setPos(pos + cardW(), true));
+  document.getElementById('rev-next')?.addEventListener('click', () => setPos(pos - cardW(), true));
+
+  track.addEventListener('mousedown', e => {
+    isDragging = true; startX = e.clientX; startPos = pos;
+    track.classList.add('grabbing');
+  });
+  document.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    setPos(startPos + (e.clientX - startX));
+  });
+  document.addEventListener('mouseup', () => {
+    isDragging = false;
+    track.classList.remove('grabbing');
+  });
+
+  /* mobile tap to expand */
+  if (window.innerWidth <= 768) {
+    track.querySelectorAll('.rev-text').forEach(t => {
+      t.addEventListener('click', () => t.classList.toggle('open'));
+    });
+  }
+})();
+
+/* ─── LOGO STRIP MARQUEE via GSAP ─── */
+(function() {
+  const strip = document.getElementById('logo-strip');
+  if (!strip || prefersReduced) return;
+  const totalW = strip.scrollWidth / 2;
+  gsap.to(strip, {
+    x: -totalW,
+    duration: 30,
+    ease: 'none',
+    repeat: -1
+  });
+  strip.closest('.logo-strip-wrap')?.addEventListener('mouseenter', () => gsap.globalTimeline.timeScale(0));
+  strip.closest('.logo-strip-wrap')?.addEventListener('mouseleave', () => gsap.globalTimeline.timeScale(1));
+})();
+
+/* ─── FOOTER MARQUEE ─── */
+(function() {
+  const mq = document.getElementById('ft-mq');
+  if (!mq || prefersReduced) return;
+  const totalW = mq.scrollWidth / 2;
+  gsap.to(mq, { x: -totalW, duration: 60, ease: 'none', repeat: -1 });
+})();
+
+/* ─── WEDDING VIDEO AUTOPLAY ─── */
+(function() {
+  const vid = document.getElementById('wedding-video');
+  if (!vid) return;
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { e.isIntersecting ? vid.play() : vid.pause(); });
+  }, { threshold: 0.3 });
+  obs.observe(vid);
+})();
+
+/* ─── SMOOTH ANCHOR SCROLL ─── */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    if (lenis) {
+      lenis.scrollTo(target, { offset: -80, duration: 1.4 });
+    } else {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+
+})();
+</script>
+</body>
+</html>
