@@ -214,7 +214,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 /* GALLERY */
 .gallery-grid{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:120px;gap:4px;margin-bottom:80px;}
 @media(max-width:1024px){.gallery-grid{grid-template-columns:repeat(4,1fr);}}
-@media(max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;}.gi{height:auto;}.gi .ph{height:auto!important;min-height:0;}.gi .ph img{position:relative!important;inset:auto!important;width:100%!important;height:auto!important;object-fit:initial!important;transform:none!important;}}
 .gi{position:relative;overflow:hidden;cursor:pointer;}
 .gi .ph,.gi img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.7,0,.2,1);}
 .gi:hover .ph,.gi:hover img{transform:scale(1.04);}
@@ -253,8 +253,8 @@ nav a:hover .ni{color:var(--ink-mute);}
 .rev-av .ph{width:100%;height:100%;}
 .rev-av img{width:100%;height:100%;object-fit:cover;}
 .rev-name{font-family:'Inter',sans-serif;font-weight:500;font-size:16px;color:var(--ink);}
-.rev-text{font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:var(--ink-mute);}
-@media(max-width:768px){.rev-text{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;}.rev-text.open{-webkit-line-clamp:unset;overflow:visible;}}
+.rev-text{font-family:'Inter',sans-serif;font-size:15px;line-height:1.6;color:var(--ink-mute);}@media(max-width:768px){.rev-text{display:-webkit-box;-webkit-line-clamp:6;-webkit-box-orient:vertical;overflow:hidden;cursor:pointer;}.rev-text.open{-webkit-line-clamp:unset;overflow:visible;}}
+
 .rev-nav{display:flex;gap:16px;margin-top:32px;align-items:center;justify-content:center;}
 .rev-btn{width:48px;height:48px;border:1px solid var(--line);background:transparent;color:var(--ink);font-family:'JetBrains Mono',monospace;font-size:20px;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:border-color .2s,color .2s;}
 .rev-btn:hover{border-color:var(--accent);color:var(--accent);}
@@ -609,42 +609,42 @@ figure figcaption{display:none;}
     <!-- Logo strip -->
     <div class="logo-strip-wrap">
       <div class="logo-strip" id="logo-strip" aria-label="Компании-клиенты">
-        <div class="logo-item"><img src="images/logo-co-01.svg" alt="Клиент 1" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
-        <div class="logo-item"><img src="images/logo-co-02.svg" alt="Клиент 2" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
-        <div class="logo-item"><img src="images/logo-co-03.png" alt="Клиент 3" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
-        <div class="logo-item"><img src="images/logo-co-04.svg" alt="Клиент 4" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
-        <div class="logo-item"><img src="images/logo-co-05.png" alt="Клиент 5" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
-        <div class="logo-item"><img src="images/logo-co-06.png" alt="Клиент 6" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
-        <div class="logo-item"><img src="images/logo-co-07.png" alt="Клиент 7" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
-        <div class="logo-item"><img src="images/logo-co-08.png" alt="Клиент 8" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
-        <div class="logo-item"><img src="images/logo-co-09.png" alt="Клиент 9" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
-        <div class="logo-item"><img src="images/logo-co-10.svg" alt="Клиент 10" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-01.svg" alt="Клиент 1" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-02.svg" alt="Клиент 2" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-03.png" alt="Клиент 3" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-04.svg" alt="Клиент 4" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-05.png" alt="Клиент 5" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-06.png" alt="Клиент 6" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-07.png" alt="Клиент 7" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-08.png" alt="Клиент 8" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-09.png" alt="Клиент 9" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-10.svg" alt="Клиент 10" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
         <!-- duplicate for loop -->
-        <div class="logo-item"><img src="images/logo-co-01.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
-        <div class="logo-item"><img src="images/logo-co-02.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
-        <div class="logo-item"><img src="images/logo-co-03.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
-        <div class="logo-item"><img src="images/logo-co-04.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
-        <div class="logo-item"><img src="images/logo-co-05.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
-        <div class="logo-item"><img src="images/logo-co-06.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
-        <div class="logo-item"><img src="images/logo-co-07.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
-        <div class="logo-item"><img src="images/logo-co-08.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
-        <div class="logo-item"><img src="images/logo-co-09.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
-        <div class="logo-item"><img src="images/logo-co-10.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-01.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-02.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-03.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-04.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-05.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-06.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-07.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-08.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-09.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/Logos/logo-co-10.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
       </div>
     </div>
 
     <!-- Corporate gallery -->
     <div class="gallery-grid" id="corp-gallery" data-gallery="corp">
-      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·01</span><span class="ph-name">corp-01</span><img src="images/corp-01.jpg" alt="Корпоратив 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·02</span><span class="ph-name">corp-02</span><img src="images/corp-02.jpg" alt="Корпоратив 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·03</span><span class="ph-name">corp-03</span><img src="images/corp-03.jpg" alt="Корпоратив 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·04</span><span class="ph-name">corp-04</span><img src="images/corp-04.jpg" alt="Корпоратив 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·05</span><span class="ph-name">corp-05</span><img src="images/corp-05.jpg" alt="Корпоратив 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·06</span><span class="ph-name">corp-06</span><img src="images/corp-06.jpg" alt="Корпоратив 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·07</span><span class="ph-name">corp-07</span><img src="images/corp-07.jpg" alt="Корпоратив 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·08</span><span class="ph-name">corp-08</span><img src="images/corp-08.jpg" alt="Корпоратив 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·09</span><span class="ph-name">corp-09</span><img src="images/corp-09.jpg" alt="Корпоратив 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·10</span><span class="ph-name">corp-10</span><img src="images/corp-10.jpg" alt="Корпоратив 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·01</span><span class="ph-name">corp-01</span><img src="images/Corp/corp-01.jpg" alt="Корпоратив 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·02</span><span class="ph-name">corp-02</span><img src="images/Corp/corp-02.jpg" alt="Корпоратив 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·03</span><span class="ph-name">corp-03</span><img src="images/Corp/corp-03.jpg" alt="Корпоратив 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·04</span><span class="ph-name">corp-04</span><img src="images/Corp/corp-04.jpg" alt="Корпоратив 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·05</span><span class="ph-name">corp-05</span><img src="images/Corp/corp-05.jpg" alt="Корпоратив 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·06</span><span class="ph-name">corp-06</span><img src="images/Corp/corp-06.jpg" alt="Корпоратив 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·07</span><span class="ph-name">corp-07</span><img src="images/Corp/corp-07.jpg" alt="Корпоратив 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·08</span><span class="ph-name">corp-08</span><img src="images/Corp/corp-08.jpg" alt="Корпоратив 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·09</span><span class="ph-name">corp-09</span><img src="images/Corp/corp-09.jpg" alt="Корпоратив 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·CORP·10</span><span class="ph-name">corp-10</span><img src="images/Corp/corp-10.jpg" alt="Корпоратив 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
     </div>
 
     <p class="vid-label">— Корпоративное юмористическое видео</p>
@@ -674,11 +674,7 @@ figure figcaption{display:none;}
     <div class="wed-layout">
       <div class="wed-vid-sticky">
         <div class="wed-vid-box">
-          <div class="ph" style="width:100%;height:100%;">
-            <span class="ph-meta">VIDEO · 9:16 · REEL</span>
-            <span class="ph-name">wedding-reel.mp4</span>
-            <video id="wedding-video" src="videos/wedding-reel.mp4" muted loop playsinline preload="metadata" aria-label="Свадебный шоурил"></video>
-          </div>
+          <video id="wedding-video" src="videos/wedding-reel.mp4" muted loop playsinline preload="metadata" aria-label="Свадебный шоурил"></video>
         </div>
       </div>
       <div class="wed-text">
@@ -708,7 +704,7 @@ figure figcaption{display:none;}
 
     <!-- Interview -->
     <p class="vid-label">— Юмористическое интервью на свадьбе</p>
-    <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+    <iframe class="vid-embed" src="https://vkvideo.ru/video_ext.php?oid=-179746438&id=456239048&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Юмористическое интервью на свадьбе"></iframe>
 
     <!-- Reviews -->
     <p class="rev-label">— Отзывы</p>
@@ -716,73 +712,73 @@ figure figcaption{display:none;}
           <div class="rev-track" id="rev-track">
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-01.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Анна и Дмитрий</p>
+                <div class="rev-av ph"><img src="images/revs/review-01.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Анастасия Горбунова</p>
               </div>
-              <p class="rev-text">Василий провёл нашу свадьбу так, что гости до сих пор вспоминают паузы перед тостами и его юмор. Никаких шаблонных конкурсов — только живая атмосфера. Рекомендуем без оговорок.</p>
+              <p class="rev-text">Свадьба это такой быстрый миг, такой яркий и незабываемый! Мне очень хотелось, чтобы я могла прожить каждую секунду этого дня, насладиться каждым мгновением, хотелось быть в моменте. Я не на секунду не усомнилась в выборе ведущего. Василий заряжал всех вокруг, было профессионально, романтично, нежно, но при этом ещё очень смешно и активно. У меня был именно такой запрос и Вася его исполнил на 1000%. Он крутой, неповторимый, очень аккуратный и внимательный!</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-02.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Екатерина С.</p>
+                <div class="rev-av ph"><img src="images/revs/review-02.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Елизавета М.</p>
               </div>
-              <p class="rev-text">Искали ведущего, который не превратит вечер в дискотеку для тёти Любы. Василий считал нас с первой встречи, предложил сценарий под наш характер. Все гости отметили вкус и интеллигентность.</p>
+              <p class="rev-text">Василий сделал незабываемым наш день. У нас было большое количество гостей, я переживала, что кому-то будет скучно и не достанется внимания, но Василий смог к каждому найти подход, и к молодым, и к взрослому поколению. Точно буду советовать его, как хорошего ведущего.</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-03.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">ООО Северсталь-Девелопмент</p>
+                <div class="rev-av ph"><img src="images/revs/review-03.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Илья Г.</p>
               </div>
-              <p class="rev-text">Корпоративный вечер на 180 человек. Уровень подачи, точная работа с регламентом, отсутствие пошлости. Будем работать ещё.</p>
+              <p class="rev-text">Я максимально доволен Василием и выбором, который сделал. Очень рад. Он был действительно сердцем этого праздника. Я бы его посоветовал всем, кого знаю, кто думает об организации свадьбы. Он был активен, но при этом не навязчив. Всё было очень комфортно в плане конкурсов и атмосферы. Он был дружелюбен и всегда готов помочь. Сосредоточился в основном на гостях, которые были активны и нуждались в поддержке. Тех, кто немного стеснялся, он не напрягал и не вызывал волнения. В целом он создал очень дружественную атмосферу с классными и интересными конкурсами. Я доволен на все сто процентов и очень благодарен ему.</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-04.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Мария и Артём</p>
+                <div class="rev-av ph"><img src="images/revs/review-04.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Марина Нигматуллина</p>
               </div>
-              <p class="rev-text">Боялись, что будет «как у всех». Получили день, который ощущался как наш. Спасибо за паузы, за юмор и за то, что не вытащили родителей на сцену с микрофоном.</p>
+              <p class="rev-text">Кроме как огромной благодарности и сказать нечего. Я - организатор, мой муж - ведущий, для нас сложно было определиться. Но мы выбрали Василия не случайно, он стал нашим уже семейным ведущим. Если ведущий - то только Вася)) В 2024 году он проводил свадьбу у моего брата и мы сразу решили, что на нашей свадьбе в 2025 году должен быть точно он 💯 Вася был с нами, в день мероприятия он видел как мы напряжены, как мы за всем досконально наблюдали, он каждый раз подходил к нам со словами «Ребята, просто расслабьтесь и кайфуйте». Вася сделал наш день... Мы безмерно благодарны Василию!</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-05.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Ольга К.</p>
+                <div class="rev-av ph"><img src="images/revs/review-05.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Марина Тармосина</p>
               </div>
-              <p class="rev-text">Василий — редкий случай ведущего, которого слушают. Голос, темп, чувство аудитории. Не работает по шаблону. Рекомендую друзьям, рекомендую сюда.</p>
+              <p class="rev-text">Мы очень всем довольны 🥹 Если честно и представить не могли насколько все круто и весело пройдет 🥳 У нас гости еще неделю после свадьбы звонили и говорили как им понравился ведущий, интеллигентный, стильный, юмор всем понятный и шутки смешные 🤪 Волнений если честно у нас не было, мы доверились организатору и были уверены, что она в своем деле профессионал и плохого ведущего нам точно не посоветует 🙌🏼 Обязательно всем будем советовать Васю 🔥</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-06.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Газпромбанк, корпоратив 2024</p>
+                <div class="rev-av ph"><img src="images/revs/review-06.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Полина</p>
               </div>
-              <p class="rev-text">Закрытый ужин для топ-менеджмента. Тон вечера был выдержан безупречно. Спасибо за профессионализм и за то, что не пришлось ничего переделывать на ходу.</p>
+              <p class="rev-text">Работой Василия довольны на 10/10😌 Харизма на высоте) Советую по сей день) Страхов не было, мы просто доверились Василию😌</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-07.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Полина и Никита</p>
+                <div class="rev-av ph"><img src="images/revs/review-07.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Оксана Галкина</p>
               </div>
-              <p class="rev-text">Хотели свадьбу без банальщины. Василий собрал день из нашей истории — это было видно в каждой детали ведения. Гости говорили: «Где вы его нашли?».</p>
+              <p class="rev-text">Наша история знакомства с Васей... — я наткнулась на его видео в Reels и сразу подумала: «Вот он, идеальный ведущий для нашей свадьбы!» И когда свадебный организатор начала предлагать варианты, выбор оказался очевиден — мы сразу остановились на Василии. И это решение оказалось абсолютно правильным. В процессе подготовки Василий детально рассказал нам обо всех аспектах проведения праздника.  Мы ни разу не усомнились в своём выборе. Атмосфера праздника была невероятной! Никаких заученных фраз и пошлых шуток — только эмоции, душевные моменты и уместный юмор.</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-08.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Ирина М.</p>
+                <div class="rev-av ph"><img src="images/revs/review-08.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Анастасия Андросова</p>
               </div>
-              <p class="rev-text">Юбилей компании, 120 гостей. Сценарий согласовывался долго и тщательно — и это окупилось. Ни одной неловкой минуты за вечер.</p>
+              <p class="rev-text">Работой Василия очень довольны. Что не маловажно, Василий слышит своих клиентов, учитывает все пожелания, поддерживает и отвечает на вопросы своевременно) Также хочу отметить, что при отзыве гостей почти все сказали, что очень понравился ведущий и то как веселье и радость нарастали. Многие гости также подметили, что во время свадьбы не хотелось взять телефон или как то отвлечься, время пролетело незаметно и очень весело. Однозначно буду советовать!</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-09.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Сбер Премьер</p>
+                <div class="rev-av ph"><img src="images/revs/review-09.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Евгений и Валерия</p>
               </div>
-              <p class="rev-text">Мероприятие для клиентов высокого сегмента. Ведущий уровня, который соответствует продукту. Без преувеличений.</p>
+              <p class="rev-text">Работой Василия довольны на все 100%. После свадьбы все гости постоянно восторженно говорили про нашего ведущего, все просили контакты и отметили высокий уровень профессионализма. Ненавязчивое ведение мероприятия, но в то же время, Василий может всех привлечь и никто не остается в стороне. Страхов абсолютно не было, особенно после общения, сразу расположил к себе и мы были уверены, что все пройдет классно. В день свадьбы не переживали, знали, что все будет весело, задорно.</p>
             </div>
             <div class="rev-card">
               <div class="rev-hdr">
-                <div class="rev-av ph"><img src="images/review-10.jpg" alt="" onerror="this.style.display='none';"></div>
-                <p class="rev-name">Светлана и Павел</p>
+                <div class="rev-av ph"><img src="images/revs/review-10.jpg" alt="" onerror="this.style.display='none';"></div>
+                <p class="rev-name">Екатерина Шабалова</p>
               </div>
-              <p class="rev-text">Свадьба за границей, всё прошло так, будто мы дома. Василий взял на себя коммуникацию с площадкой, организовал ритм вечера, оставил нам только эмоции. Низкий поклон.</p>
+              <p class="rev-text">У нас супер положительное впечатление сложилось о работе Васи. Ни на секунду не чувствовалось никакой неловкости. Сумел расположить к себе и нас, и гостей С кем общались после торжества, восхищались его работой. Как нам показалось, Вася смог найти подход ко всем гостям вне зависимости от возраста. Было очень весело, динамично и в то же время тепло, с душой и трогательно, так как для нас это тоже было очень важно. Вообще не пожалели, что выбрали именно его для проведения такого важного для нас дня! Все было так, как мы и хотели!</p>
             </div>
           </div>
         </div>
@@ -890,7 +886,7 @@ figure figcaption{display:none;}
       </li>
       <li class="faq-item">
         <button class="faq-q" aria-expanded="false"><span class="faq-idx">04</span><h3 class="faq-qt">Вы поёте, танцуете, проводите конкурсы?</h3><span class="faq-tog">+</span></button>
-        <div class="faq-ans" role="region"><div class="faq-ans-in">Веду — это моё. Пою и танцую только если это уместно в контексте конкретного события. Конкурсы — авторские, согласованные с вами, без шаблонов из 2000-х.</div></div>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Веду — это моё. Я создаю такую атмосферу, чтобы гости сами пели и танцевали, а если это уместно, то просто могу присоединиться в моменте в контексте конкретного события. Конкурсы — авторские, и другие активности, согласованные с вами.</div></div>
       </li>
       <li class="faq-item">
         <button class="faq-q" aria-expanded="false"><span class="faq-idx">05</span><h3 class="faq-qt">Сколько времени вы работаете на мероприятии?</h3><span class="faq-tog">+</span></button>
@@ -898,11 +894,11 @@ figure figcaption{display:none;}
       </li>
       <li class="faq-item">
         <button class="faq-q" aria-expanded="false"><span class="faq-idx">06</span><h3 class="faq-qt">Работаете за пределами Москвы и Пензы?</h3><span class="faq-tog">+</span></button>
-        <div class="faq-ans" role="region"><div class="faq-ans-in">Да. Выезд по России и за рубеж — обсуждается отдельно: логистика, проживание, тайминг. Делал свадьбы в Сочи, Казани, Петербурге, на загородных площадках Подмосковья. К выезду за рубеж готов.</div></div>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Да. Выезд по России в любую точку и за рубеж — обсуждается отдельно: логистика, проживание, тайминг.</div></div>
       </li>
       <li class="faq-item">
         <button class="faq-q" aria-expanded="false"><span class="faq-idx">07</span><h3 class="faq-qt">Как происходит оплата?</h3><span class="faq-tog">+</span></button>
-        <div class="faq-ans" role="region"><div class="faq-ans-in">Предоплата 30% — фиксирует дату в моём календаре. Остаток — в день события или накануне, как удобно. Договор обязателен.</div></div>
+        <div class="faq-ans" role="region"><div class="faq-ans-in">Предоплата 20% — фиксирует дату в моём календаре. Остаток — в день события или накануне, как удобно. Договор обязателен.</div></div>
       </li>
       <li class="faq-item">
         <button class="faq-q" aria-expanded="false"><span class="faq-idx">08</span><h3 class="faq-qt">Что входит в стоимость?</h3><span class="faq-tog">+</span></button>
@@ -934,7 +930,7 @@ figure figcaption{display:none;}
   <div class="wrap">
     <p class="sec-label">— 05&nbsp;/&nbsp;Контакты</p>
     <h2 class="contacts-h2 sec-h2" id="contacts-h2">Поговорим</h2>
-    <p class="contacts-sub">Напишите в удобный мессенджер или позвоните. Отвечаю в течение дня. Обсудим формат события, дату, детали — без обязательств.</p>
+    <p class="contacts-sub">Напишите в удобный мессенджер или позвоните. Отвечаю в течение пары часов, иногда дольше. Обсудим формат события, дату, детали — без обязательств.</p>
     <ul class="cont-list">
       <li><a href="tel:+79022051308" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Телефон</span><span class="cont-val">+7 902 205 13 08</span></a></li>
       <li><a href="https://t.me/VasiliyReviakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Telegram</span><span class="cont-val">НАПИСАТЬ</span></a></li>
@@ -950,9 +946,6 @@ figure figcaption{display:none;}
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <a href="https://t.me/VasiliyReviakin" class="btn btn-primary" style="margin-bottom:80px;" target="_blank" rel="noopener">
-      <span class="bti"><span class="btt">Написать</span><span class="btb">Написать</span></span>
-    </a>
     <div class="ft-cols">
       <div class="ft-col">
         <p class="ft-col-lbl">— Василий Ревякин</p>
@@ -980,14 +973,6 @@ figure figcaption{display:none;}
         <p class="ft-col-lbl">— География</p>
         <p>Москва<br>Пенза<br>Саранск<br>Россия и зарубеж</p>
       </div>
-    </div>
-  </div>
-  <div class="ft-mq-wrap">
-    <div class="ft-mq" id="ft-mq">
-      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
-      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
-      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
-      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
     </div>
   </div>
   <p class="ft-copy">© 2026&nbsp;·&nbsp;Все права защищены</p>
@@ -1244,10 +1229,10 @@ document.querySelectorAll('.fact-num').forEach(el => {
     onEnter: () => {
       if (triggered) return;
       triggered = true;
-      if (prefersReduced) { el.textContent = '80 000'; return; }
+      if (prefersReduced) { el.textContent = '100 000'; return; }
       const obj = { val: 0 };
       gsap.to(obj, {
-        val: 80000, duration: 1.8, ease: 'power3.out',
+        val: 100000, duration: 1.8, ease: 'power3.out',
         onUpdate: () => {
           el.textContent = Math.round(obj.val).toLocaleString('ru-RU').replace(/,/g, ' ');
         }
@@ -1324,9 +1309,8 @@ document.querySelectorAll('.fact-num').forEach(el => {
   function spansFor(ratio, bp) {
     // ratio = naturalWidth / naturalHeight
     if (bp === 'mobile') {
-      if (ratio < 0.9) return [1, 5]; // portrait
-      if (ratio > 1.4)  return [2, 2]; // landscape
-      return [1, 3];                   // square
+      if (ratio > 1.4) return [2, 1]; // landscape → 2 cols
+      return [1, 1];                  // portrait/square → 1 col
     }
     if (bp === 'tablet') {
       if (ratio < 0.9) return [2, 5];
@@ -1477,7 +1461,7 @@ document.querySelectorAll('.faq-q').forEach(btn => {
   const cardW = () => track.children[0]?.offsetWidth + 24 || 404;
 
   function setPos(x, animated = false) {
-    const maxPos = -(track.scrollWidth / 2 - track.parentElement.offsetWidth);
+    const maxPos = -(track.scrollWidth - track.parentElement.offsetWidth);
     pos = Math.max(maxPos, Math.min(0, x));
     if (animated) {
       gsap.to(track, { x: pos, duration: 0.5, ease: 'power3.out' });
