@@ -108,9 +108,10 @@ header{position:fixed;top:0;left:0;right:0;height:80px;z-index:100;transition:ba
 header.scrolled{background:rgba(10,10,11,.85);backdrop-filter:blur(12px);border-bottom-color:var(--line);}
 @media(max-width:640px){header{height:64px;}}
 .hdr{display:flex;align-items:center;justify-content:space-between;height:100%;}
-.hdr-logo{height:24px;display:flex;align-items:center;}
+.hdr-logo{height:24px;display:flex;align-items:center;transition:opacity .5s cubic-bezier(.7,0,.2,1),transform .5s cubic-bezier(.7,0,.2,1);opacity:1;transform:translateY(0);}
 .hdr-logo img{height:24px;width:auto;}
 .hdr-logo .logo-ph{font-family:'JetBrains Mono',monospace;font-size:15px;color:var(--accent);letter-spacing:.15em;}
+header.at-hero .hdr-logo{opacity:0;transform:translateY(-8px);pointer-events:none;}
 nav{display:flex;align-items:center;gap:32px;}
 nav a{font-family:'JetBrains Mono',monospace;font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-mute);transition:color .2s;}
 nav a .ni{color:var(--accent);transition:color .2s;}
@@ -128,17 +129,18 @@ nav a:hover .ni{color:var(--ink-mute);}
 
 /* HERO */
 #top{min-height:100vh;background:var(--bg-pure);position:relative;overflow:hidden;}
-.hero-grid{display:grid;grid-template-columns:5fr 7fr;min-height:100vh;}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;min-height:100vh;}
 @media(max-width:1024px){.hero-grid{grid-template-columns:1fr;}}
 .hero-left{display:flex;flex-direction:column;padding:120px 0 60px 80px;position:relative;z-index:2;}
 @media(max-width:1024px){.hero-left{padding:100px 48px 40px;}}
 @media(max-width:640px){.hero-left{padding:90px 24px 40px;}}
-.hero-svc{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:auto;}
-.hero-logo-wrap{height:80px;display:flex;align-items:center;margin-bottom:32px;margin-top:40px;}
-.hero-logo-wrap img{height:80px;width:auto;}
+.hero-svc{display:none;}
+.hero-btm-group{margin-top:auto;}
+.hero-logo-wrap{height:auto;display:flex;align-items:center;margin-bottom:40px;margin-top:0;}
+.hero-logo-wrap img{height:280px;width:auto;max-width:100%;}
 .hero-logo-wrap .logo-ph{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--accent);letter-spacing:.2em;}
-.hero-h1{font-size:clamp(64px,9vw,160px);line-height:.92;letter-spacing:-.04em;color:var(--ink);margin-bottom:60px;overflow:visible;}
-@media(min-width:1025px){.hero-h1{width:145%;}}
+.hero-h1{font-size:clamp(68px,3.2vw,56px);line-height:.95;letter-spacing:-.01em;color:var(--ink-mute);margin-bottom:24px;overflow:visible;}
+@media(min-width:1025px){.hero-h1{width:100%;}}
 .hero-bot{display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
 .hero-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.12em;text-transform:uppercase;}
 .hero-right{position:relative;overflow:hidden;}
@@ -149,7 +151,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 @keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
 
 /* APPROACH */
-#approach{background:var(--bg-void);padding:160px 0;}
+#approach{background:var(--bg-void);padding:100px 0;}
 .app-grid{display:grid;grid-template-columns:5fr 1fr 6fr;gap:24px;align-items:start;}
 @media(max-width:1024px){.app-grid{grid-template-columns:1fr;}}
 .app-photo{aspect-ratio:4/5;}
@@ -165,7 +167,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .fact-lbl{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.15em;max-width:280px;}
 
 /* WHY */
-#why{position:relative;padding:160px 0;overflow:hidden;}
+#why{position:relative;padding:100px 0;overflow:hidden;}
 .why-bg-wrap{position:absolute;inset:0;z-index:0;}
 .why-bg-wrap img{width:100%;height:100%;object-fit:cover;}
 .why-bg-wrap .ph{width:100%;height:100%;}
@@ -183,15 +185,16 @@ nav a:hover .ni{color:var(--ink-mute);}
 .pause-bg-wrap img{width:100%;height:100%;object-fit:cover;}
 .pause-bg-wrap .ph{width:100%;height:100%;}
 .pause-ov{position:absolute;inset:0;background:rgba(10,10,11,.75);}
-.pause-c{position:relative;z-index:1;padding:120px 0;width:100%;}
-.pause-text{font-size:clamp(26px,3.2vw,52px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.25;letter-spacing:-.02em;max-width:1000px;}
-.pause-line{display:block;overflow:hidden;margin-bottom:1.2em;}
+.pause-c{position:relative;z-index:1;padding:80px 0;width:100%;}
+.pause-text{font-size:clamp(22px,2.4vw,36px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.3;letter-spacing:-.02em;max-width:1000px;}
+.pause-line{display:block;margin-bottom:1.2em;}
+.pause-block{margin-bottom:2em;}
 .pause-line-in{display:block;}
 .pause-text .acc{color:var(--accent);}
 .pause-sig{font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.15em;margin-top:60px;}
 
 /* CORPORATE */
-#corporate{background:var(--bg-void);padding:160px 0;}
+#corporate{background:var(--bg-void);padding:100px 0;}
 .corp-grid{display:grid;grid-template-columns:5fr 1fr 6fr;gap:24px;align-items:start;margin-bottom:120px;}
 @media(max-width:1024px){.corp-grid{grid-template-columns:1fr;}}
 .corp-text p{color:var(--ink-mute);max-width:520px;margin-bottom:20px;line-height:1.7;}
@@ -237,12 +240,12 @@ nav a:hover .ni{color:var(--ink-mute);}
 .vid-embed{aspect-ratio:16/9;width:100%;margin-bottom:80px;border:none;display:block;}
 
 /* WEDDINGS */
-#weddings{background:var(--bg-graphite);padding:160px 0;}
+#weddings{background:var(--bg-graphite);padding:100px 0;}
 .wed-layout{display:grid;grid-template-columns:38% 1fr;gap:80px;align-items:start;}
 @media(max-width:1024px){.wed-layout{grid-template-columns:1fr;}}
-.wed-vid-sticky{position:sticky;top:120px;}
-@media(max-width:1024px){.wed-vid-sticky{position:relative;top:auto;}}
-.wed-vid-box{aspect-ratio:9/16;width:100%;background:var(--bg-void);overflow:hidden;}
+.wed-vid-sticky{position:relative;top:auto;}
+.wed-vid-box{aspect-ratio:9/16;width:100%;background:var(--bg-void);overflow:hidden;max-height:80vh;}
+@media(max-width:640px){.wed-vid-box{max-height:60vh;}}
 .wed-vid-box video{width:100%;height:100%;object-fit:cover;}
 .wed-vid-box .ph{width:100%;height:100%;}
 .wed-text p{color:var(--ink-mute);max-width:580px;margin-bottom:20px;line-height:1.7;}
@@ -269,7 +272,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 @media(max-width:768px){.rev-nav{display:none;}}
 
 /* PRICE */
-#price{background:var(--bg-void);padding:160px 0;}
+#price{background:var(--bg-void);padding:100px 0;}
 .price-c{max-width:900px;margin:0 auto;text-align:center;}
 .price-num{font-size:clamp(80px,12vw,180px);font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.04em;line-height:.9;margin-bottom:60px;}
 .price-num .cur{color:var(--accent);}
@@ -278,7 +281,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .price-sub{color:var(--ink-mute);font-size:16px;max-width:580px;margin:60px auto 0;line-height:1.7;}
 
 /* GEO */
-#geo{background:var(--bg-graphite);padding:160px 0;}
+#geo{background:var(--bg-graphite);padding:100px 0;}
 .geo-text{font-size:clamp(26px,3vw,46px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.3;margin-bottom:80px;max-width:900px;}
 .geo-text strong{font-weight:300;color:var(--ink);}
 .geo-list{list-style:none;display:flex;flex-direction:column;gap:16px;}
@@ -286,7 +289,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .geo-idx{color:var(--accent);}
 
 /* FAQ */
-#faq{background:var(--bg-void);padding:160px 0;}
+#faq{background:var(--bg-void);padding:100px 0;}
 .faq-list{list-style:none;max-width:900px;}
 .faq-item{border-bottom:1px solid var(--line);}
 .faq-item:first-child{border-top:1px solid var(--line);}
@@ -300,7 +303,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .faq-item.open .faq-ans-in{opacity:1;}
 
 /* CONTACTS */
-#contacts{background:var(--bg-pure);padding:160px 0;}
+#contacts{background:var(--bg-pure);padding:100px 0;}
 .contacts-h2{font-size:clamp(72px,14vw,200px);letter-spacing:-.04em;line-height:.9;margin-bottom:60px;}
 .contacts-sub{color:var(--ink-mute);max-width:580px;margin-bottom:80px;}
 .cont-list{list-style:none;max-width:900px;}
@@ -313,7 +316,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .cont-item:hover .cont-val{color:var(--accent);}
 
 /* FOOTER */
-footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
+footer{background:var(--bg-pure);padding:100px 0 0;overflow:hidden;}
 .ft-hl{font-size:clamp(100px,19vw,300px);font-family:'Space Grotesk',sans-serif;font-weight:300;letter-spacing:-.04em;line-height:.9;color:var(--ink);overflow:hidden;margin-bottom:60px;white-space:nowrap;}
 .ft-cols{display:grid;grid-template-columns:repeat(4,1fr);gap:40px;padding:80px 0 60px;border-top:1px solid var(--line);}
 @media(max-width:768px){.ft-cols{grid-template-columns:repeat(2,1fr);}}
@@ -346,6 +349,12 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 @media(prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;}
 }
+/* MISC */
+figure figcaption{display:none;}
+.ph-meta,.ph-name{display:none;}
+.wed-reel-embed{max-height:70vh;}
+@media(max-width:640px){.divider{height:auto;padding:60px 0;}}
+.ft-hl{display:none;}
 </style>
 </head>
 <body>
@@ -392,17 +401,17 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <section id="top" aria-label="Главный экран">
   <div class="hero-grid">
     <div class="hero-left">
-      <p class="hero-svc">— 01&nbsp;/&nbsp;Василий Ревякин</p>
-      <div class="hero-logo-wrap">
-        <img src="images/logo1.png" alt="Логотип Василий Ревякин" class="hero-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
-        <span class="logo-ph" style="display:none;">ВАСИЛИЙ РЕВЯКИН</span>
-      </div>
       <h1 class="hero-h1" id="hero-h1">Ведущий свадеб, частных и корпоративных событий</h1>
-      <div class="hero-bot">
-        <a href="#contacts" class="btn btn-primary" aria-label="Обсудить событие">
-          <span class="bti"><span class="btt">Обсудить событие</span><span class="btb">Обсудить событие</span></span>
-        </a>
-        <span class="hero-tag">MSK&nbsp;·&nbsp;PNZ&nbsp;·&nbsp;WORLD</span>
+      <div class="hero-btm-group">
+        <div class="hero-logo-wrap">
+          <img src="images/logo1.png" alt="Логотип Василий Ревякин" class="hero-logo-img" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';">
+          <span class="logo-ph" style="display:none;">ВАСИЛИЙ РЕВЯКИН</span>
+        </div>
+        <div class="hero-bot">
+          <a href="#contacts" class="btn btn-primary" aria-label="Обсудить событие">
+            <span class="bti"><span class="btt">Обсудить событие</span><span class="btb">Обсудить событие</span></span>
+          </a>
+        </div>
       </div>
     </div>
     <div class="hero-right">
@@ -433,7 +442,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- APPROACH -->
 <section id="approach" aria-label="Аперитив — цифры">
   <div class="wrap">
-    <p class="sec-label">— 02&nbsp;/&nbsp;Аперитив</p>
+    <p class="sec-label">— 01&nbsp;/&nbsp;Обо мне</p>
     <h2 class="sec-h2">Для аперитива — цифры</h2>
     <div class="app-grid">
       <div class="app-photo ph">
@@ -498,7 +507,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
     <div class="why-ov2"></div>
   </div>
   <div class="why-c wrap">
-    <p class="sec-label">— 03&nbsp;/&nbsp;Почему я</p>
+    <p class="sec-label">—&nbsp;/&nbsp;УТП</p>
     <h2 class="sec-h2">Почему я?</h2>
     <ul class="why-list">
       <li class="why-item">
@@ -549,21 +558,28 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
     <div class="pause-ov"></div>
   </div>
   <div class="pause-c wrap">
-    <p class="sec-label">— 04&nbsp;/&nbsp;Манифест</p>
+    <p class="sec-label">—&nbsp;/&nbsp;Мой манифест</p>
     <div class="pause-text" id="pause-text">
-      <span class="pause-line"><span class="pause-line-in">Мы привыкли думать, что праздник — это просто развлечение.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Но любое сильное событие наполняют <span class="acc">смыслы</span>,</span></span>
-      <span class="pause-line"><span class="pause-line-in">его предваряет история.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Несколько лет я был программистом — учился структурировать хаос.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Опыт в театре дал мне инструменты доставки смыслов —</span></span>
-      <span class="pause-line"><span class="pause-line-in">голос, паузу, жест.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Мероприятия научили чувствовать публику.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Быть <span class="acc">архитектором событий и эмоций</span>.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Я создаю <span class="acc">безопасное комфортное пространство</span>,</span></span>
-      <span class="pause-line"><span class="pause-line-in">где люди сопричастны, понимают атмосферу и могут быть собой.</span></span>
-      <span class="pause-line"><span class="pause-line-in">Я создаю события для тех, кто ценит смыслы.</span></span>
+      <span class="pause-block">
+        <span class="pause-line"><span class="pause-line-in">Праздник — это не просто развлечение.</span></span>
+      </span>
+      <span class="pause-block">
+        <span class="pause-line"><span class="pause-line-in">Сильное событие всегда наполнено <span class="acc">смыслами</span>.</span></span>
+        <span class="pause-line"><span class="pause-line-in">За ним стоит история.</span></span>
+      </span>
+      <span class="pause-block">
+        <span class="pause-line"><span class="pause-line-in">Я был программистом — учился структурировать хаос.</span></span>
+        <span class="pause-line"><span class="pause-line-in">Театр дал голос, паузу, жест.</span></span>
+        <span class="pause-line"><span class="pause-line-in">Мероприятия — умение чувствовать публику.</span></span>
+      </span>
+      <span class="pause-block">
+        <span class="pause-line"><span class="pause-line-in">Я <span class="acc">архитектор событий и эмоций</span>.</span></span>
+        <span class="pause-line"><span class="pause-line-in">Создаю пространство, где люди могут быть собой.</span></span>
+      </span>
+      <span class="pause-block">
+        <span class="pause-line"><span class="pause-line-in">Я работаю с теми, кто ценит <span class="acc">смыслы</span>.</span></span>
+      </span>
     </div>
-    <p class="pause-sig">Василий Ревякин, 2025</p>
   </div>
 </section>
 
@@ -583,7 +599,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- CORPORATE -->
 <section id="corporate" aria-label="Корпоративы">
   <div class="wrap">
-    <p class="sec-label">— 05&nbsp;/&nbsp;Корпоративы</p>
+    <p class="sec-label">— 02&nbsp;/&nbsp;Корпоративы</p>
     <h2 class="sec-h2">Корпоративы</h2>
     <div class="corp-grid">
       <div class="corp-text">
@@ -663,8 +679,9 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- WEDDINGS -->
 <section id="weddings" aria-label="Свадьбы">
   <div class="wrap">
-    <p class="sec-label">— 06&nbsp;/&nbsp;Свадьбы</p>
+    <p class="sec-label">— 03&nbsp;/&nbsp;Свадьбы</p>
     <h2 class="sec-h2">Свадьбы</h2>
+    <!-- Video reel + Text -->
     <div class="wed-layout">
       <div class="wed-vid-sticky">
         <div class="wed-vid-box">
@@ -679,32 +696,33 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
         <p>Ведущий на свадьбу в Москве — для тех, кто хочет, чтобы день был про них, а не про сценарий из интернета. Я не работаю по шаблону: каждая свадьба собирается из истории пары, темпа гостей и характера площадки.</p>
         <p>Никаких шаблонных конкурсов, выкупов туфли и тостов «по очереди». Ведущий мероприятий с театральным бэкграундом — это про паузу, в которой звучит важное, про юмор без сальностей, про умение держать атмосферу от первой встречи до финального танца.</p>
         <p>Работаю как ведущий Пенза, ведущий Саранск, Москва и любая география России и зарубежья.</p>
+      </div>
+    </div>
 
-        <!-- Wedding gallery -->
-        <div class="gallery-grid" id="wed-gallery" data-gallery="wed" style="margin-top:60px;">
-          <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·01</span><span class="ph-name">wed-01</span><img src="images/wed-01.jpg" alt="Свадьба 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·02</span><span class="ph-name">wed-02</span><img src="images/wed-02.jpg" alt="Свадьба 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·03</span><span class="ph-name">wed-03</span><img src="images/wed-03.jpg" alt="Свадьба 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·04</span><span class="ph-name">wed-04</span><img src="images/wed-04.jpg" alt="Свадьба 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·05</span><span class="ph-name">wed-05</span><img src="images/wed-05.jpg" alt="Свадьба 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·06</span><span class="ph-name">wed-06</span><img src="images/wed-06.jpg" alt="Свадьба 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·07</span><span class="ph-name">wed-07</span><img src="images/wed-07.jpg" alt="Свадьба 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·08</span><span class="ph-name">wed-08</span><img src="images/wed-08.jpg" alt="Свадьба 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·09</span><span class="ph-name">wed-09</span><img src="images/wed-09.jpg" alt="Свадьба 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-          <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·10</span><span class="ph-name">wed-10</span><img src="images/wed-10.jpg" alt="Свадьба 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-        </div>
+    <!-- Showreel -->
+    <p class="vid-label" style="margin-top:60px;">— Свадебный шоурил 2025</p>
+    <iframe class="vid-embed wed-reel-embed" src="https://vkvideo.ru/video_ext.php?oid=932999&id=456239496&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Свадебный шоурил 2025"></iframe>
 
-        <p class="vid-label">— Свадебный шоурил 2025</p>
-        <iframe class="vid-embed" src="https://vkvideo.ru/video_ext.php?oid=932999&id=456239496&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Свадебный шоурил 2025"></iframe>
+    <!-- Gallery -->
+    <div class="gallery-grid" id="wed-gallery" data-gallery="wed" style="margin-top:0;">
+      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·01</span><span class="ph-name">wed-01</span><img src="images/wed-01.jpg" alt="Свадьба 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·02</span><span class="ph-name">wed-02</span><img src="images/wed-02.jpg" alt="Свадьба 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·03</span><span class="ph-name">wed-03</span><img src="images/wed-03.jpg" alt="Свадьба 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·04</span><span class="ph-name">wed-04</span><img src="images/wed-04.jpg" alt="Свадьба 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·05</span><span class="ph-name">wed-05</span><img src="images/wed-05.jpg" alt="Свадьба 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·06</span><span class="ph-name">wed-06</span><img src="images/wed-06.jpg" alt="Свадьба 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·07</span><span class="ph-name">wed-07</span><img src="images/wed-07.jpg" alt="Свадьба 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·08</span><span class="ph-name">wed-08</span><img src="images/wed-08.jpg" alt="Свадьба 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·09</span><span class="ph-name">wed-09</span><img src="images/wed-09.jpg" alt="Свадьба 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·10</span><span class="ph-name">wed-10</span><img src="images/wed-10.jpg" alt="Свадьба 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+    </div>
 
-        <p class="vid-label">— Юмористическое интервью на свадьбе</p>
-        <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+    <!-- Interview -->
+    <p class="vid-label">— Юмористическое интервью на свадьбе</p>
+    <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
 
-        <p class="vid-label">— Церемония</p>
-        <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
-
-        <!-- Reviews -->
-        <p class="rev-label">— Отзывы</p>
+    <!-- Reviews -->
+    <p class="rev-label">— Отзывы</p>
         <div class="rev-wrap">
           <div class="rev-track" id="rev-track">
             <div class="rev-card">
@@ -779,11 +797,9 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
             </div>
           </div>
         </div>
-        <div class="rev-nav">
-          <button class="rev-btn" id="rev-prev" aria-label="Предыдущий отзыв">←</button>
-          <button class="rev-btn" id="rev-next" aria-label="Следующий отзыв">→</button>
-        </div>
-      </div>
+    <div class="rev-nav">
+      <button class="rev-btn" id="rev-prev" aria-label="Предыдущий отзыв">←</button>
+      <button class="rev-btn" id="rev-next" aria-label="Следующий отзыв">→</button>
     </div>
   </div>
 </section>
@@ -804,7 +820,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- PRICE -->
 <section id="price" aria-label="Стоимость">
   <div class="wrap">
-    <p class="sec-label">— 07&nbsp;/&nbsp;Стоимость</p>
+    <p class="sec-label">— 04&nbsp;/&nbsp;Стоимость</p>
     <h2 class="sec-h2">Стоимость</h2>
     <div class="price-c">
       <div class="price-num">
@@ -835,9 +851,9 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- GEO -->
 <section id="geo" aria-label="География">
   <div class="wrap">
-    <p class="sec-label">— 08&nbsp;/&nbsp;География</p>
+    <p class="sec-label">—&nbsp;/&nbsp;География</p>
     <h2 class="sec-h2">География</h2>
-    <p class="geo-text">Работаю по всей России и за рубежом. Базовые города — <strong>Москва</strong>, <strong>Пенза</strong>, <strong>Саранск</strong>. Готов к выездам в любую точку мира — от загородной площадки в Подмосковье до свадьбы на побережье Италии.</p>
+    <p class="geo-text">Работаю по всей России и за рубежом. Базовые города — <strong>Москва</strong>, <strong>Пенза</strong>, <strong>Саранск</strong>. Готов к выездам в любую точку мира — от загородной площадки в Подмосковье до свадьбы на Бали.</p>
     <ul class="geo-list">
       <li class="geo-item geo-reveal"><span class="geo-idx">01</span>&nbsp;·&nbsp;Москва</li>
       <li class="geo-item geo-reveal"><span class="geo-idx">02</span>&nbsp;·&nbsp;Пенза</li>
@@ -868,7 +884,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- FAQ -->
 <section id="faq" aria-label="Часто спрашивают">
   <div class="wrap">
-    <p class="sec-label">— 09&nbsp;/&nbsp;Вопросы</p>
+    <p class="sec-label">—&nbsp;/&nbsp;Вопросы</p>
     <h2 class="sec-h2">Часто спрашивают</h2>
     <ul class="faq-list">
       <li class="faq-item">
@@ -927,15 +943,15 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- CONTACTS -->
 <section id="contacts" aria-label="Контакты">
   <div class="wrap">
-    <p class="sec-label">— 10&nbsp;/&nbsp;Свяжемся</p>
+    <p class="sec-label">— 05&nbsp;/&nbsp;Контакты</p>
     <h2 class="contacts-h2 sec-h2" id="contacts-h2">Поговорим</h2>
     <p class="contacts-sub">Напишите в удобный мессенджер или позвоните. Отвечаю в течение дня. Обсудим формат события, дату, детали — без обязательств.</p>
     <ul class="cont-list">
-      <li><a href="tel:+79999999999" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Телефон</span><span class="cont-val">+7 999 999 99 99</span></a></li>
-      <li><a href="https://t.me/revyakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Telegram</span><span class="cont-val">@revyakin</span></a></li>
-      <li><a href="https://wa.me/79999999999" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">WhatsApp</span><span class="cont-val">+7 999 999 99 99</span></a></li>
-      <li><a href="mailto:hello@revyakin.ru" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Email</span><span class="cont-val">hello@revyakin.ru</span></a></li>
-      <li><a href="https://instagram.com/revyakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Instagram</span><span class="cont-val">@revyakin</span></a></li>
+      <li><a href="tel:+79022051308" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">Телефон</span><span class="cont-val">+7 902 205 13 08</span></a></li>
+      <li><a href="https://t.me/VasiliyReviakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Telegram</span><span class="cont-val">НАПИСАТЬ</span></a></li>
+      <li><a href="https://vk.com/vasiliyrevyakin" class="cont-item"><span class="cont-arrow">→</span><span class="cont-lbl">ВКонтакте</span><span class="cont-val">НАПИСАТЬ</span></a></li>
+      <li><a href="https://instagram.com/vasiliy.revyakin" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">Instagram</span><span class="cont-val">ОТКРЫТЬ ПРОФИЛЬ</span></a></li>
+      <li><a href="https://wa.me/79022051308" class="cont-item" target="_blank" rel="noopener"><span class="cont-arrow">→</span><span class="cont-lbl">WhatsApp</span><span class="cont-val">НАПИСАТЬ</span></a></li>
     </ul>
   </div>
 </section>
@@ -945,8 +961,7 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
 <!-- FOOTER -->
 <footer>
   <div class="wrap">
-    <div class="ft-hl" id="ft-hl">ПОГОВОРИМ</div>
-    <a href="#contacts" class="btn btn-primary" style="margin-bottom:80px;">
+    <a href="https://t.me/VasiliyReviakin" class="btn btn-primary" style="margin-bottom:80px;" target="_blank" rel="noopener">
       <span class="bti"><span class="btt">Написать</span><span class="btb">Написать</span></span>
     </a>
     <div class="ft-cols">
@@ -967,8 +982,8 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
       <div class="ft-col">
         <p class="ft-col-lbl">— Связь</p>
         <address>
-          <a href="tel:+79999999999">+7 999 999 99 99</a>
-          <a href="https://t.me/revyakin" target="_blank" rel="noopener">@revyakin</a>
+          <a href="tel:+79999999999">+7 902 205 13 08</a>
+          <a href="https://t.me/VasiliyReviakin" target="_blank" rel="noopener">@revyakin</a>
           <a href="mailto:hello@revyakin.ru">hello@revyakin.ru</a>
         </address>
       </div>
@@ -980,13 +995,13 @@ footer{background:var(--bg-pure);padding:120px 0 0;overflow:hidden;}
   </div>
   <div class="ft-mq-wrap">
     <div class="ft-mq" id="ft-mq">
-      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
-      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
-      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
-      <span>VASILIY REVYAKIN&nbsp;·&nbsp;MOSCOW&nbsp;·&nbsp;PENZA&nbsp;·&nbsp;SARANSK&nbsp;·&nbsp;WORLDWIDE&nbsp;·&nbsp;2025&nbsp;·&nbsp;</span>
+      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
+      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
+      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
+      <span>ВАСИЛИЙ РЕВЯКИН&nbsp;·&nbsp;МОСКВА&nbsp;·&nbsp;ПЕНЗА&nbsp;·&nbsp;САРАНСК&nbsp;·&nbsp;РОССИЯ&nbsp;·&nbsp;2026&nbsp;·&nbsp;</span>
     </div>
   </div>
-  <p class="ft-copy">© 2025&nbsp;·&nbsp;Все права защищены</p>
+  <p class="ft-copy">© 2026&nbsp;·&nbsp;Все права защищены</p>
 </footer>
 
 <!-- LIGHTBOX -->
@@ -1063,6 +1078,15 @@ ScrollTrigger.create({
   }
 });
 
+/* ─── HEADER LOGO: скрыт в hero ─── */
+header.classList.add('at-hero');
+ScrollTrigger.create({
+  trigger: '#top',
+  start: 'bottom top',
+  onEnter: () => header.classList.remove('at-hero'),
+  onLeaveBack: () => header.classList.add('at-hero'),
+});
+
 /* ─── MOBILE MENU ─── */
 const burger = document.getElementById('burger-btn');
 const mobNav = document.getElementById('mob-nav');
@@ -1118,8 +1142,6 @@ window.addEventListener('load', () => {
 document.querySelectorAll('.sec-h2').forEach(h2 => splitAndReveal(h2, true));
 splitAndReveal(document.getElementById('contacts-h2'), true);
 
-/* ─── FOOTER HEADLINE ─── */
-splitAndReveal(document.getElementById('ft-hl'), true);
 
 /* ─── CLIP-PATH REVEAL (general content) ─── */
 function revealClip(els) {
@@ -1261,27 +1283,41 @@ document.querySelectorAll('.fact-num').forEach(el => {
 (function() {
   const lines = document.querySelectorAll('.pause-line-in');
   if (!lines.length) return;
-  if (prefersReduced) return;
 
-  lines.forEach((line, i) => {
-    gsap.from(line, {
-      clipPath: 'inset(110% 0 -10% 0)',
-      duration: 0.1,
-      scrollTrigger: {
-        trigger: '#pause',
-        start: 'top 80%',
-        end: 'bottom 60%',
-        scrub: 1,
-        onUpdate: self => {
-          const step = 1 / lines.length;
-          const progress = Math.max(0, Math.min(1, (self.progress - i * step * 0.8) / (step * 1.5)));
-          gsap.set(line, {
-            clipPath: `inset(${(1 - progress) * 110}% 0 -10% 0)`
-          });
-        }
-      }
-    });
+  const inkMute = '#6B6B70';
+  const ink = '#F2F0EB';
+
+  if (prefersReduced) {
+    lines.forEach(l => l.style.color = ink);
+    return;
+  }
+
+  lines.forEach(l => l.style.color = inkMute);
+
+  ScrollTrigger.create({
+    trigger: '#pause',
+    start: 'top 75%',
+    end: 'bottom 55%',
+    scrub: 0.8,
+    onUpdate: self => {
+      const n = lines.length;
+      lines.forEach((line, i) => {
+        const step = 1 / n;
+        const t = Math.max(0, Math.min(1, (self.progress - i * step * 0.75) / (step * 1.4)));
+        line.style.color = lerpColor(inkMute, ink, t);
+      });
+    }
   });
+
+  function lerpColor(a, b, t) {
+    const pa = parseInt(a.slice(1), 16), pb = parseInt(b.slice(1), 16);
+    const ar = pa >> 16, ag = (pa >> 8) & 0xff, ab = pa & 0xff;
+    const br = pb >> 16, bg = (pb >> 8) & 0xff, bb = pb & 0xff;
+    const r = Math.round(ar + (br - ar) * t);
+    const g = Math.round(ag + (bg - ag) * t);
+    const bv = Math.round(ab + (bb - ab) * t);
+    return `rgb(${r},${g},${bv})`;
+  }
 })();
 
 /* ─── GALLERY SHUTTER + LIGHTBOX SETUP ─── */
