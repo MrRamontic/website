@@ -139,8 +139,10 @@ nav a:hover .ni{color:var(--ink-mute);}
 .hero-logo-wrap{height:auto;display:flex;align-items:center;margin-bottom:40px;margin-top:0;}
 .hero-logo-wrap img{height:280px;width:auto;max-width:100%;}
 .hero-logo-wrap .logo-ph{font-family:'JetBrains Mono',monospace;font-size:22px;color:var(--accent);letter-spacing:.2em;}
-.hero-h1{font-size:clamp(68px,3.2vw,56px);line-height:.95;letter-spacing:-.01em;color:var(--ink-mute);margin-bottom:24px;overflow:visible;}
+.hero-h1{font-size:clamp(22px,5vw,56px);line-height:.95;letter-spacing:-.01em;color:var(--ink-mute);margin-bottom:24px;overflow:visible;}
 @media(min-width:1025px){.hero-h1{width:100%;}}
+@media(max-width:640px){.hero-logo-wrap img{height:160px;}}
+@media(min-width:1025px){.hero-bot{transform:translateY(60px);}}
 .hero-bot{display:flex;align-items:center;gap:32px;flex-wrap:wrap;}
 .hero-tag{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.12em;text-transform:uppercase;}
 .hero-right{position:relative;overflow:hidden;}
@@ -169,7 +171,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 /* WHY */
 #why{position:relative;padding:100px 0;overflow:hidden;}
 .why-bg-wrap{position:absolute;inset:0;z-index:0;}
-.why-bg-wrap img{width:100%;height:100%;object-fit:cover;}
+.why-bg-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;}
 .why-bg-wrap .ph{width:100%;height:100%;}
 .why-ov{position:absolute;inset:0;background:rgba(10,10,11,.7);}
 .why-ov2{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.3),rgba(0,0,0,.7));}
@@ -182,10 +184,10 @@ nav a:hover .ni{color:var(--ink-mute);}
 /* PAUSE */
 #pause{position:relative;min-height:100vh;display:flex;align-items:center;}
 .pause-bg-wrap{position:absolute;inset:0;z-index:0;}
-.pause-bg-wrap img{width:100%;height:100%;object-fit:cover;}
+.pause-bg-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;}
 .pause-bg-wrap .ph{width:100%;height:100%;}
 .pause-ov{position:absolute;inset:0;background:rgba(10,10,11,.75);}
-.pause-c{position:relative;z-index:1;padding:80px 0;width:100%;}
+.pause-c{position:relative;z-index:1;padding-top:80px;padding-bottom:80px;width:100%;}
 .pause-text{font-size:clamp(22px,2.4vw,36px);font-family:'Space Grotesk',sans-serif;font-weight:300;line-height:1.3;letter-spacing:-.02em;max-width:1000px;}
 .pause-line{display:block;margin-bottom:1.2em;}
 .pause-block{margin-bottom:2em;}
@@ -214,18 +216,6 @@ nav a:hover .ni{color:var(--ink-mute);}
 @media(max-width:1024px){.gallery-grid{grid-template-columns:repeat(4,1fr);}}
 @media(max-width:640px){.gallery-grid{grid-template-columns:repeat(2,1fr);}}
 .gi{position:relative;overflow:hidden;cursor:pointer;}
-.gi:nth-child(1){grid-column:span 3;grid-row:span 4;}
-.gi:nth-child(2){grid-column:span 2;grid-row:span 3;}
-.gi:nth-child(3){grid-column:span 1;grid-row:span 3;}
-.gi:nth-child(4){grid-column:span 2;grid-row:span 2;}
-.gi:nth-child(5){grid-column:span 2;grid-row:span 4;}
-.gi:nth-child(6){grid-column:span 2;grid-row:span 2;}
-.gi:nth-child(7){grid-column:span 3;grid-row:span 3;}
-.gi:nth-child(8){grid-column:span 1;grid-row:span 2;}
-.gi:nth-child(9){grid-column:span 2;grid-row:span 3;}
-.gi:nth-child(10){grid-column:span 3;grid-row:span 2;}
-@media(max-width:1024px){.gi:nth-child(n){grid-column:span 2;grid-row:span 3;}}
-@media(max-width:640px){.gi:nth-child(n){grid-column:span 1;grid-row:span 3;}}
 .gi .ph,.gi img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.7,0,.2,1);}
 .gi:hover .ph,.gi:hover img{transform:scale(1.04);}
 .gi-ov{position:absolute;inset:0;background:var(--bg-void);opacity:0;transition:opacity .6s;z-index:1;}
@@ -236,8 +226,7 @@ nav a:hover .ni{color:var(--ink-mute);}
 .vid-label{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);letter-spacing:.15em;text-transform:uppercase;margin-bottom:24px;}
 .vid-ph{aspect-ratio:16/9;background:var(--bg-graphite);display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;margin-bottom:80px;}
 .vid-ph::before{content:'';position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,rgba(242,240,235,.03) 0,rgba(242,240,235,.03) 1px,transparent 1px,transparent 12px);}
-.vid-ph-txt{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.1em;position:relative;z-index:1;}
-.vid-embed{aspect-ratio:16/9;width:100%;margin-bottom:80px;border:none;display:block;}
+.vid-ph-txt{font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--ink-mute);text-transform:uppercase;letter-spacing:.1em;position:relative;z-index:1;}.vid-embed{aspect-ratio:16/9;width:100%;margin-bottom:80px;border:none;display:block;}
 
 /* WEDDINGS */
 #weddings{background:var(--bg-graphite);padding:100px 0;}
@@ -336,7 +325,7 @@ footer{background:var(--bg-pure);padding:100px 0 0;overflow:hidden;}
 .lbx-close{position:absolute;top:32px;right:32px;font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--ink);background:none;border:none;cursor:pointer;width:40px;height:40px;display:flex;align-items:center;justify-content:center;transition:color .2s;}
 .lbx-close:hover{color:var(--accent);}
 .lbx-img{max-width:90vw;max-height:90vh;object-fit:contain;display:block;}
-.lbx-img-wrap{max-width:90vw;max-height:90vh;overflow:hidden;}
+.lbx-img-wrap{max-width:90vw;max-height:90vh;overflow:hidden;display:flex;align-items:center;justify-content:center;}
 .lbx-ph{width:70vw;height:70vh;max-width:900px;}
 .lbx-prev,.lbx-next{position:absolute;top:50%;transform:translateY(-50%);font-family:'JetBrains Mono',monospace;font-size:28px;color:var(--ink);background:none;border:none;cursor:pointer;padding:16px;transition:color .2s,transform .2s;}
 .lbx-prev{left:24px;}
@@ -622,24 +611,24 @@ figure figcaption{display:none;}
       <div class="logo-strip" id="logo-strip" aria-label="Компании-клиенты">
         <div class="logo-item"><img src="images/logo-co-01.svg" alt="Клиент 1" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
         <div class="logo-item"><img src="images/logo-co-02.svg" alt="Клиент 2" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
-        <div class="logo-item"><img src="images/logo-co-03.svg" alt="Клиент 3" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/logo-co-03.png" alt="Клиент 3" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
         <div class="logo-item"><img src="images/logo-co-04.svg" alt="Клиент 4" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
-        <div class="logo-item"><img src="images/logo-co-05.svg" alt="Клиент 5" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
-        <div class="logo-item"><img src="images/logo-co-06.svg" alt="Клиент 6" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
-        <div class="logo-item"><img src="images/logo-co-07.svg" alt="Клиент 7" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
-        <div class="logo-item"><img src="images/logo-co-08.svg" alt="Клиент 8" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
-        <div class="logo-item"><img src="images/logo-co-09.svg" alt="Клиент 9" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/logo-co-05.png" alt="Клиент 5" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/logo-co-06.png" alt="Клиент 6" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/logo-co-07.png" alt="Клиент 7" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/logo-co-08.png" alt="Клиент 8" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/logo-co-09.png" alt="Клиент 9" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
         <div class="logo-item"><img src="images/logo-co-10.svg" alt="Клиент 10" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
         <!-- duplicate for loop -->
         <div class="logo-item"><img src="images/logo-co-01.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 01</span></div>
         <div class="logo-item"><img src="images/logo-co-02.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 02</span></div>
-        <div class="logo-item"><img src="images/logo-co-03.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
+        <div class="logo-item"><img src="images/logo-co-03.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 03</span></div>
         <div class="logo-item"><img src="images/logo-co-04.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 04</span></div>
-        <div class="logo-item"><img src="images/logo-co-05.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
-        <div class="logo-item"><img src="images/logo-co-06.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
-        <div class="logo-item"><img src="images/logo-co-07.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
-        <div class="logo-item"><img src="images/logo-co-08.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
-        <div class="logo-item"><img src="images/logo-co-09.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
+        <div class="logo-item"><img src="images/logo-co-05.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 05</span></div>
+        <div class="logo-item"><img src="images/logo-co-06.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 06</span></div>
+        <div class="logo-item"><img src="images/logo-co-07.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 07</span></div>
+        <div class="logo-item"><img src="images/logo-co-08.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 08</span></div>
+        <div class="logo-item"><img src="images/logo-co-09.png" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 09</span></div>
         <div class="logo-item"><img src="images/logo-co-10.svg" alt="" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling.style.display='block';"><span class="li-ph" style="display:none;">LOGO 10</span></div>
       </div>
     </div>
@@ -659,7 +648,7 @@ figure figcaption{display:none;}
     </div>
 
     <p class="vid-label">— Корпоративное юмористическое видео</p>
-    <div class="vid-ph"><span class="vid-ph-txt">VIDEO · ВК · URL TBD</span></div>
+    <iframe class="vid-embed" src="https://vkvideo.ru/video_ext.php?oid=-179746438&id=456239047&hd=2" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="Корпоративное юмористическое видео"></iframe>
   </div>
 </section>
 
@@ -705,16 +694,16 @@ figure figcaption{display:none;}
 
     <!-- Gallery -->
     <div class="gallery-grid" id="wed-gallery" data-gallery="wed" style="margin-top:0;">
-      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·01</span><span class="ph-name">wed-01</span><img src="images/wed-01.jpg" alt="Свадьба 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·02</span><span class="ph-name">wed-02</span><img src="images/wed-02.jpg" alt="Свадьба 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·03</span><span class="ph-name">wed-03</span><img src="images/wed-03.jpg" alt="Свадьба 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·04</span><span class="ph-name">wed-04</span><img src="images/wed-04.jpg" alt="Свадьба 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·05</span><span class="ph-name">wed-05</span><img src="images/wed-05.jpg" alt="Свадьба 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·06</span><span class="ph-name">wed-06</span><img src="images/wed-06.jpg" alt="Свадьба 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·07</span><span class="ph-name">wed-07</span><img src="images/wed-07.jpg" alt="Свадьба 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·08</span><span class="ph-name">wed-08</span><img src="images/wed-08.jpg" alt="Свадьба 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·09</span><span class="ph-name">wed-09</span><img src="images/wed-09.jpg" alt="Свадьба 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
-      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·10</span><span class="ph-name">wed-10</span><img src="images/wed-10.jpg" alt="Свадьба 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="0"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·01</span><span class="ph-name">wed-01</span><img src="images/wedding/wed-01.jpg" alt="Свадьба 1" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="1"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·02</span><span class="ph-name">wed-02</span><img src="images/wedding/wed-02.jpg" alt="Свадьба 2" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="2"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·03</span><span class="ph-name">wed-03</span><img src="images/wedding/wed-03.jpg" alt="Свадьба 3" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="3"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·04</span><span class="ph-name">wed-04</span><img src="images/wedding/wed-04.jpg" alt="Свадьба 4" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="4"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·05</span><span class="ph-name">wed-05</span><img src="images/wedding/wed-05.jpg" alt="Свадьба 5" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="5"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·06</span><span class="ph-name">wed-06</span><img src="images/wedding/wed-06.jpg" alt="Свадьба 6" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="6"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·07</span><span class="ph-name">wed-07</span><img src="images/wedding/wed-07.jpg" alt="Свадьба 7" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="7"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·08</span><span class="ph-name">wed-08</span><img src="images/wedding/wed-08.jpg" alt="Свадьба 8" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="8"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·09</span><span class="ph-name">wed-09</span><img src="images/wedding/wed-09.jpg" alt="Свадьба 9" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
+      <div class="gi" data-idx="9"><div class="ph" style="width:100%;height:100%;"><span class="ph-meta">IMG·WED·10</span><span class="ph-name">wed-10</span><img src="images/wedding/wed-10.jpg" alt="Свадьба 10" loading="lazy" onerror="this.style.display='none';"></div><div class="gi-ov"></div><div class="gi-shutter"></div></div>
     </div>
 
     <!-- Interview -->
@@ -1011,8 +1000,8 @@ figure figcaption{display:none;}
   <div class="lbx-img-wrap">
     <div class="ph lbx-ph" id="lbx-ph">
       <span class="ph-name" id="lbx-name">—</span>
-      <img id="lbx-img" class="lbx-img" src="" alt="" style="display:none;">
     </div>
+    <img id="lbx-img" class="lbx-img" src="" alt="" style="display:none;">
   </div>
   <button class="lbx-next" id="lbx-next" aria-label="Следующее фото">→</button>
   <p class="lbx-counter" id="lbx-counter">01 / 10</p>
@@ -1296,14 +1285,17 @@ document.querySelectorAll('.fact-num').forEach(el => {
 
   ScrollTrigger.create({
     trigger: '#pause',
-    start: 'top 75%',
-    end: 'bottom 55%',
-    scrub: 0.8,
-    onUpdate: self => {
-      const n = lines.length;
-      lines.forEach((line, i) => {
-        const step = 1 / n;
-        const t = Math.max(0, Math.min(1, (self.progress - i * step * 0.75) / (step * 1.4)));
+    start: 'top bottom',
+    end: 'bottom top',
+    scrub: true,
+    onUpdate: () => {
+      const vh2 = window.innerHeight / 2;
+      const spread = window.innerHeight * 0.32;
+      lines.forEach(line => {
+        const rect = line.getBoundingClientRect();
+        const lc = rect.top + rect.height / 2;
+        const dist = Math.abs(lc - vh2);
+        const t = Math.max(0, 1 - dist / spread);
         line.style.color = lerpColor(inkMute, ink, t);
       });
     }
@@ -1318,6 +1310,68 @@ document.querySelectorAll('.fact-num').forEach(el => {
     const bv = Math.round(ab + (bb - ab) * t);
     return `rgb(${r},${g},${bv})`;
   }
+})();
+
+/* ─── GALLERY AUTO SPANS ─── */
+(function() {
+  function getBreakpoint() {
+    const w = window.innerWidth;
+    if (w <= 640) return 'mobile';
+    if (w <= 1024) return 'tablet';
+    return 'desktop';
+  }
+
+  function spansFor(ratio, bp) {
+    // ratio = naturalWidth / naturalHeight
+    if (bp === 'mobile') {
+      if (ratio < 0.9) return [1, 5]; // portrait
+      if (ratio > 1.4)  return [2, 2]; // landscape
+      return [1, 3];                   // square
+    }
+    if (bp === 'tablet') {
+      if (ratio < 0.9) return [2, 5];
+      if (ratio > 1.4)  return [4, 2];
+      return [2, 3];
+    }
+    // desktop (6 cols)
+    if (ratio < 0.9) return [2, 4];
+    if (ratio > 1.4)  return [3, 2];
+    return [2, 3];
+  }
+
+  function applySpans(item, ratio) {
+    const bp = getBreakpoint();
+    const [col, row] = spansFor(ratio, bp);
+    item.style.gridColumn = 'span ' + col;
+    item.style.gridRow = 'span ' + row;
+  }
+
+  const items = document.querySelectorAll('.gallery-grid .gi');
+  items.forEach(item => {
+    const img = item.querySelector('img');
+    if (!img) return;
+
+    function apply() {
+      if (img.naturalWidth && img.naturalHeight) {
+        const ratio = img.naturalWidth / img.naturalHeight;
+        item._giRatio = ratio;
+        applySpans(item, ratio);
+      }
+    }
+
+    if (img.complete) apply();
+    else img.addEventListener('load', apply);
+  });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(() => {
+      items.forEach(item => {
+        if (item._giRatio) applySpans(item, item._giRatio);
+      });
+    }, 100);
+  });
 })();
 
 /* ─── GALLERY SHUTTER + LIGHTBOX SETUP ─── */
@@ -1369,9 +1423,10 @@ function showLbxItem(idx) {
     lbxImg.src = img.src;
     lbxImg.alt = img.alt;
     lbxImg.style.display = 'block';
-    lbxName.textContent = phName ? phName.textContent : '';
+    lbxPh.style.display = 'none';
   } else {
     lbxImg.style.display = 'none';
+    lbxPh.style.display = '';
     lbxName.textContent = phName ? phName.textContent : '—';
   }
   if (!prefersReduced) {
